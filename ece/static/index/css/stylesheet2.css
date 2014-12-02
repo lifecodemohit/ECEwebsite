@@ -85,6 +85,7 @@ a {
   margin-top: 10px;
   width: 100%;
   background-color: white;
+  clear: both;
   border-bottom: 2px solid #3FADA8; }
 
 /* line 123, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
@@ -328,19 +329,21 @@ ul li {
   background-color: #3FADA8; }
 
 /* line 382, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
-.longBar:first-of-type {
+.longBar {
+  min-width: 960px;
   width: 100%;
-  height: 25px;
+  height: 25px; }
+
+/* line 387, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+.longBar:first-of-type {
   box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #d1d9de; }
 
-/* line 389, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 392, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .longBar:last-of-type {
-  width: 100%;
-  height: 25px;
   box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);

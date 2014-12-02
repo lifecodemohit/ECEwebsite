@@ -123,7 +123,7 @@ a {
   font-weight: 500;
   color: #666666; }
 
-/* line 167, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 164, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .theBodyDiv {
   display: inline-block;
   text-align: center;
@@ -133,7 +133,7 @@ a {
   -ms-box-shadow: 0px 1px 5px 0px #666666;
   width: 100%; }
 
-/* line 176, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 173, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .theBodyDiv > div:nth-of-type(1) {
   display: block;
   height: 40px;
@@ -144,7 +144,7 @@ a {
   color: white;
   padding: 5px 0; }
 
-/* line 186, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 183, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .membersContent {
   display: block;
   min-height: 40px;
@@ -153,7 +153,7 @@ a {
   font-weight: 500;
   color: black; }
 
-/* line 194, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 191, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .infoBlock {
   /*border-top: 1px solid $i4;*/
   position: relative;
@@ -161,7 +161,7 @@ a {
   display: block;
   vertical-align: top; }
 
-/* line 208, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 205, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .footer {
   margin-top: 10px;
   display: block;
@@ -169,27 +169,28 @@ a {
   height: 90px;
   background-color: #3FADA8; }
 
+/* line 212, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+.longBar {
+  width: 1400px;
+  height: 25px; }
+
 /* line 215, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .longBar:first-of-type {
-  width: 100%;
-  height: 25px;
   box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #d1d9de; }
 
-/* line 222, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 220, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .longBar:last-of-type {
-  width: 100%;
-  height: 25px;
   box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #d1d9de; }
 
-/* line 231, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 226, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .members_div {
   font-size: 14px;
   display: inline-block;
@@ -201,7 +202,7 @@ a {
   vertical-align: top;
   clear: both; }
 
-/* line 243, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 238, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .members_div > div {
   margin-top: 20px;
   padding-top: 10px;
@@ -209,10 +210,10 @@ a {
   width: 60%;
   text-align: center;
   margin-left: 32%; }
-  /* line 250, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+  /* line 245, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
   .members_div > div span:nth-of-type(1) {
     font-weight: 500; }
-  /* line 253, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+  /* line 248, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
   .members_div > div span {
     text-align: justify;
     width: 100%;
@@ -220,7 +221,7 @@ a {
     font-size: 12px;
     display: block; }
 
-/* line 255, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
+/* line 250, /home/atul/Documents/web/ece/gitRepo/ece/static/lab/css/stylesheet_members.scss */
 .members_div > img {
   margin-top: 18px;
   float: left;

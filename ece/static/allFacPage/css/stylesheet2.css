@@ -275,19 +275,20 @@ a {
   background-color: #3FADA8; }
 
 /* line 318, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
+.longBar {
+  width: 1400px;
+  height: 25px; }
+
+/* line 321, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .longBar:first-of-type {
-  width: 100%;
-  height: 25px;
   box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #d1d9de; }
 
-/* line 325, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
+/* line 326, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .longBar:last-of-type {
-  width: 100%;
-  height: 25px;
   box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.3);

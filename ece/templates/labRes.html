@@ -5,76 +5,44 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" type="text/css" href="{% static 'lab/css/stylesheet_research.css' %}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'lab/css/stylesheet_members.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'lab/css/slider_stylesheet.css' %}">
+
     <title>ECE Research Group Website</title>
 </head>
+
 <body>
-	<!--<h1>Hello World.....</h1>
-	<h1>{{cLabMem.lab_name}}</h1>
-    <h3>{{cLabMem.lab_code}}</h3>
-    {% for res in cLabMem.labresearch_set.all %}
-    	<h2>{{res.lresearch_title}}</h2>
-    	<h3>{{res.lresearch_about}}</h3>
-    {% endfor %}!--> 
+<!--
+    <h1>Hello World.....</h1>
+    <h1>{{cLab.lab_name}}</h1>
+    <h3>{{cLab.lab_about}}</h3>!-->
     <div class="longBar"></div>
     <div class="container">
 
         <div class="header">
-            <img src="/static/logo/long_min_iiitd_colors.png" alt="IIITD">
+            <div class="research_group_title">{{cLab.lab_name}}</div>
             <div class="ece_head"><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span>
             </div>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a>
-                </li><li><a href="#">Research</a>
-                    <ul>
-                        <li><a href="#"><span>Research Group 1</span></a>
-                        </li>
-                        <br>
-                        <li><a href="#"><span>Research Group 2</span></a>
-                        </li>
-                        <br>
-                        <li><a href="#"><span>Research Group 3</span></a>
-                        </li>
-                        <br>
-                        <li><a href="#"><span>Research Group 4</span></a>
-                        </li>
-                    </ul>
-                </li><li><a href="#">Publications</a>
-                </li><li><a href="#">People</a>
-                    <ul>
-                        <li><a href="#"><span>Faculty</span></a>
-                        </li>
-                        <br>
-                        <li><a href="#"><span>Students</span></a>
-                        </li>
-                    </ul>
-                </li><li><a href="">About</a>
-                </li>
 
-            </ul>
-        </div>
         <div class="theBody">
             <div class="upperBlock">
 
+            <div class="menu2"> <!-- second menu -->
+         <ul>
+    <li><a href="./index.html">About</a>
+    </li>
+    <li><a href="./lab_members.html">Members</a>
+    </li>
+    <li><a href="./lab_research_page.html">Research</a>
+    </li>
+    <li><a href="./lab_pub.html">Publications</a>
+    </li>
 
-                <div class="research_group_title">Lab Title</div>
-                <div class="menu2">
-                    <!-- second menu -->
-                    <ul>
-                <li><a href="./index.html">About</a>
-                </li><li><a href="./lab_members.html">Members</a>
-                </li><li><a href="./lab_research_page.html">Research</a>
-                </li><li><a href="./lab_pub.html">Publications</a>
-                </li>
 
-
+</ul>
                     </ul>
                 </div>
                 <div class="infoBlock">

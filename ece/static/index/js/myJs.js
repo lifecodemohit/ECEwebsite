@@ -37,5 +37,10 @@ $(window).load(function(){
 
   resizeColumns();
     $(window).on('zoom', resizeColumns);
+    $(document).on('zoom', resizeColumns);
+
+
+     swfZoomDetection.init({
+     'onZoomChange': resizeColumns});
     
           });
