@@ -94,7 +94,15 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         }
 
 }
+.menu2{
+    clear: both;
+    width: 100%;
+    background-color: $menu_background_color;
+    //margin: 0 auto;
+           margin-top:10px;
 
+
+}
 
  .menu2 >ul{
         
@@ -109,7 +117,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         //@include bs(0px,1px,0px,1px,$color_d);
         margin: 1px 0px;
         display: inline-block;
-        width: 25%;
+        width: 24%;
         /*height:40px;
         vertical-align: middle;*/
         //padding: 10px 0;
@@ -143,16 +151,17 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     //margin-top: 0;
     //margin-top: -10px;
 }
-    .research_group_title{
+        .research_group_title{
         padding: 20px 0;
-        width: 100%;
+        width: 40%;
+        display: inline-block;
         text-align: center;
         font-size: 20px;
         font-weight: 500;
         color:$i3
-          
-    
-       
+
+
+
         
     }
     .theBodyDiv{
