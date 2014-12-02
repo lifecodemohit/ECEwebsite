@@ -1,0 +1,83 @@
+{% load static %}
+<html>
+
+    <head>
+        <title>ECE Research Group</title>
+         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'researchPage/css/stylesheet2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'researchPage/css/slider_stylesheet.css' %}">
+    </head>
+    <body>
+        <div class = "longBar"></div>
+        <div class = "container">
+            
+            <div class = "header"><img src = "/static/logo/long_min_iiitd_colors.png" alt="IIITD"><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
+            </div>
+            <div class = "menu">
+                <ul>
+                    <li><a href = "#">Home</a></li><li><a href = "#" >Research</a>
+                    <ul><li><a href = "#"><span>Research Group 1</span></a></li><br><li><a href = "#"><span>Research Group 2</span></a></li><br><li><a href = "#"><span>Research Group 3</span></a></li><br><li><a href = "#"><span>Research Group 4</span></a></li></ul>
+                    </li><li><a href = "#">Publications</a></li><li><a href="#">People</a><ul><li><a href = "#"><span>Faculty</span></a></li><br><li><a href = "#"><span>Students</span></a></li></ul></li><li><a href="">About</a></li>
+
+                </ul>
+            </div>
+                <div class = "theBody">
+                <div class="upperBlock">
+                    
+                    <div class="rslides_container" class="slider" id="home">
+            <ul class="rslides" id="slider1">
+                <li><img src="{{ cGroup.img1.url }}" alt=""></li>
+                <li><img src="{{ cGroup.img2.url }}" alt=""></li>
+                <li><img src="{{ cGroup.img3.url }}" alt=""></li>
+                <li><img src="{{ cGroup.img4.url }}" alt=""></li>
+                <li><img src="{{ cGroup.img5.url }}" alt=""></li>
+            </ul></div>
+                    <div class="research_group_title">{{cGroup.category}}</div></div>
+                    <div class="about">
+                        <div>About</div>
+                        <div class="aboutContent">
+                            <img src = "{{ cGroup.img6.url }}"/>
+                        {% autoescape off %}{{cGroup.about}}{% endautoescape %}</div>
+                    </div>
+                <div class = "infoBlock">
+                    <ul class = "listLevel1"><!-- --><li class = "box1"><div><a href="/publication/">Latest Publications</a></div><div class = "pubBoxText">
+                        {% if publication_list %}
+                         <ul>
+                            {% for pub in publication_list %}
+                            <li><ul><li class="research_box_title"><a href = "/publication/{{ pub.pubDetail }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf}}</li></ul></li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                            <p></p>
+                        {% endif %}
+                        </div></li><!-- --><li class = "box2"><div><a href = "/faculty/">People</a></div><div class = "resBoxText"> <!--hash replaced by this.(researches.html)-->
+                        {% for faculty in faculty_list %}
+                        {% for facu in faculty.facultycoursecode_set.all %}
+                        <ul>
+                            {% ifequal cGroup.title facu.fcoursecode %}
+                              <!--<li><div>{{facu.fcoursecode}}</div></li>!-->
+                              <li><ul><li class="people_left"><a href = "/faculty/{{ faculty.facultycode }}">{{faculty.name}}</a></li><li class = "people_right">{{facu.extrainf}}</li></ul></li>
+                            {% endifequal %}
+                        </ul>
+                        {% endfor %}
+                        {% endfor %}
+                        </div></li>
+                    </ul>
+                </div>
+                    <embed class="video" width="310" height="215"
+src="http://www.youtube.com/v/XGSy3_Czz8k">
+            </div>
+            
+            <div class = "footer"></div>
+            </div>
+        <div class = "longBar"></div>
+
+        
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+        <script src="/static/researchPage/js/jQuery.js"></script>
+        <script src="/static/researchPage/js/myJs.js"></script>
+        <script src="/static/researchPage/js/responsiveslides.min.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,339 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,400,300);
+/* fonts available : 500,400italic,400 */
+$font_stack: 'Raleway', Segoe UI, 'Raleway', sans-serif;
+$light_font: 400;
+$heavy_font:500;
+$i1 : #333333;
+$blue_header_font_weight : 500;
+@mixin bg($o){
+
+   background-color : rgba(51,51,51,$o);
+}
+@mixin bs($a:0,$b:0,$c:0,$d:0,$color:#000){
+    box-shadow: $a $b $c $d $color;
+    -webkit-box-shadow: $a $b $c $d $color;
+     -moz-box-shadow: $a $b $c $d $color;
+      -ms-box-shadow: $a $b $c $d $color;
+}
+@mixin bsn()//box-shadow-none
+{
+     box-shadow: none;
+    -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+      -ms-box-shadow:none
+}
+$i2 : #4D4D4D;
+$i3 : #666666;
+$i4 : #808080;
+$color_d : #3FADA8;
+$color_n: #AD3F44;
+$header_color : #fff;//#3FADA8;
+$header_content: #3FADA8;
+
+/****************************************** menu attributes */ 
+$menu_background_color: rgba(255,255,255,1);//rgba(0,0,0,1);
+$menu_color: $i2;
+$drop_down_menu_color: rgba(0,0,0,0.65);//rgba(255,255,255,0.8);
+$drop_down_color : rgba(255,255,255,1);//$i1;
+
+//$about_width = 35%;
+$grey_body: #fff;
+$height_header: 90px;
+$linec: #ffefff;
+*{
+    padding : 0;
+    margin : 0;
+    border: none;
+    font-family: $font_stack !important;
+    font-weight: 100 ;
+    list-style: none;
+
+}
+body{
+
+background: -webkit-linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* Standard syntax */
+
+    
+}
+a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inherit}
+.container{
+    display:block;
+    width: 980px;
+    margin:0  auto;
+    background-color: white;
+}
+.header{
+    display: block;
+    color: $i1;
+    background-color: $grey_body;
+  
+        
+        img{
+
+            display: inline-block;
+            position: relative;
+//            height: 100px;
+            width: 50%;
+    }
+        .ece_head{
+            
+            
+            height: 30px;
+            background-color: white ;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            
+            
+            text-align: right;
+            padding: 30px;
+            width: 40%;
+            vertical-align: top;/////this to be added
+            margin-right: -10px;/////this to be added
+            span{font-size: 15px;font-weight: 800;}
+            span:nth-of-type(1){color: $i1;}
+            span:nth-of-type(2){color: $i2;}
+            span:nth-of-type(3){color: $i3;}
+            span:nth-of-type(4){color: $i4;}
+            span:nth-of-type(5){color: $color_d;}
+            
+//            box-shadow: -1px 1px 0px #fff;
+        }
+
+}
+
+.menu{
+
+    margin-top:10px;
+    width: 100%;
+    background-color: $menu_background_color;
+    
+    border-bottom: 2px solid $color_d;
+    
+    
+}
+    .menu >ul{
+        
+        cursor: context-menu;
+        //@include bs(0px,-1px,0px,1px,$color_d);
+        
+    }
+    .menu > ul > li{
+        
+        
+        padding: 5px 0;
+        //@include bs(0px,1px,0px,1px,$color_d);
+        margin: 1px 0px;
+        display: inline-block;
+        width: 20%;
+        /*height:40px;
+        vertical-align: middle;*/
+        //padding: 10px 0;
+        font-size: 16px ;
+        text-align: center;
+        //padding: 5px 0;
+        color: $menu_color ;font-weight: 600;font-size: 13px;
+        
+    }
+.menu > ul > li > a{position: relative;display: block; width:auto ;  color: $menu_color ;font-weight: 600;font-size: 13px;/*line-height: 40px;*/}
+
+    .menu > ul > li:nth-child(n+1){
+    //border-right: 1px solid #fff;
+//          @include bs(-5px,0px,5px,0,$linec);
+            color: rgba(255,255,255,1) ;
+            margin-bottom: 0;
+    }
+    /*DROP DOWN */
+   .menu > ul > li > ul{
+        
+            background-color:$drop_down_menu_color;//rgba(0,0,0,0.7);
+            display: none;
+          position: absolute;
+       margin-top: 5px;
+           z-index: 50;
+        
+        padding: 4px 0px;
+        border-bottom: 1px solid $color_d;
+        border-left: 1px solid $color_d;
+        border-right: 1px solid $color_d;
+       
+        li{
+            margin: 5px 10px;
+            width: 180px ;
+            //min-width: 20%;
+            box-shadow: none ;
+            text-align: center;
+            a{
+                //line-height: 0;
+                font-size:12px ;
+                font-weight: 800 ;
+                color: $drop_down_color;
+                font-size: 11px;
+                white-space: nowrap; /*removed the overlapping of group names*/
+                
+            }
+        }
+
+       
+}
+  
+.menu>ul > li:hover > ul{display: block;}
+//.menu>ul > li > ul:hover {display: block;}
+   .menu > ul  li:hover > a {color:$color_d;}
+        
+       .menu2{
+           
+    margin-top:10px;
+    width: 60%;
+    background-color: $menu_background_color;
+    margin: 0 auto;
+    
+    
+}
+ .menu2 >ul{
+        
+        cursor: context-menu;
+        //@include bs(0px,-1px,0px,1px,$color_d);
+        
+    }
+    .menu2 > ul > li{
+        
+        
+        padding: 5px 0;
+        //@include bs(0px,1px,0px,1px,$color_d);
+        margin: 1px 0px;
+        display: inline-block;
+        width: 25%;
+        /*height:40px;
+        vertical-align: middle;*/
+        //padding: 10px 0;
+        font-size: 16px ;
+        text-align: center;
+        //padding: 5px 0;
+        color: $menu_color ;font-weight: 600;font-size: 13px;
+        
+    }
+.menu2 > ul > li > a{position: relative;display: block; width:auto ;  color: $menu_color ;font-weight: 600;font-size: 13px;/*line-height: 40px;*/}
+ 
+  
+   
+
+
+
+
+
+          
+
+
+
+.theBody{
+    
+    cursor: context-menu;
+    width: 100%;
+    //height:  auto;
+   background-color: $grey_body;
+    padding: 0;
+    //padding: 0 10px;
+    //margin-top: 0;
+    //margin-top: -10px;
+}
+    .research_group_title{
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        color:$i3
+          
+    
+       
+        
+    }
+    .theBodyDiv{
+        
+        
+        display:  inline-block;
+        text-align: center;
+        @include bs(0px,1px,5px,0px,$i3);
+        width: 100%;
+             
+    }
+ .theBodyDiv > div:nth-of-type(1){
+            display: block;
+            height: 40px;
+            background-color: $color_d;
+            width: 100%;
+            line-height: 40px;
+            font-weight: $blue_header_font_weight;
+            color:white;
+            padding: 5px 0;
+        }
+// .theBodyDiv > div:nth-of-type(2){
+//            display: block;
+//            min-height: 40px;
+//            background-color: white;
+//            width: 100%;
+//            font-weight: $blue_header_font_weight;
+//            color:black;
+//        }
+    .infoBlock{
+        /*border-top: 1px solid $i4;*/ //line above info block
+        position: relative;
+        width: 100%;
+        //margin-left: 100px;
+        
+        display: block;
+        
+        vertical-align: top;
+    }  
+ 
+         
+
+
+.footer{
+    margin-top:10px;
+    display: block;
+    border-top:1px solid $i4;
+    height: $height_header;
+    background-color: $color_d;
+}
+.longBar:first-of-type{
+    width: 100%;
+    height:25px;
+    @include bs(0,1px,1px,0px,rgba(0,0,0,.3));
+    
+    background-color: #d1d9de;
+}
+.longBar:last-of-type{
+    width: 100%;
+    height:25px;
+    //@include bs(0,1px,1px,0px,rgba(0,0,0,.3));
+    @include bs(0,-1px,1px,0px,rgba(0,0,0,.3));
+    background-color: #d1d9de;
+}
+
+
+.research_head{
+    width: 100%;
+    height: contain;
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    padding: 10px 0;
+    background-color: $color_n;
+    cursor: grabbing !important;
+    
+}
+.research_dropdown{
+    width: 96%;
+    padding: 1% 2%;
+    font-size: 14px;
+    display: none;
+    text-align: left;
+}
+.showResearch{
+    display: block;
+}

@@ -1,0 +1,91 @@
+{% load static %}
+<html>
+
+    <head>
+        <title>ECE Research Group</title>
+         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'faculty/css/stylesheet2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'faculty/css/slider_stylesheet.css' %}">
+    </head>
+    <body>
+        <div class = "longBar"></div>
+        <div class = "container">
+            
+            <div class = "header"><img src = "/static/logo/long_min_iiitd_colors.png" alt="IIITD"><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
+            </div>
+            <div class = "menu">
+                <ul>
+                    <li><a href = "#" tabindex="1">Home</a></li><li><a href = "#" tabindex="2">Research</a>
+                    <ul><li><a href = "#"><span>Research  1</span></a></li><br><li><a href = "#"><span>Research Group 2</span></a></li><br><li><a href = "#"><span>Research Group 3</span></a></li><br><li><a href = "#"><span>Research Group 4</span></a></li></ul>
+                    </li><li><a href = "#" tabindex="3">Publications</a></li><li><a href="#" tabindex="4">People</a><ul><li><a href = "#" tabindex="5"><span>Faculty</span></a></li><br><li><a href = "#"><span>Students</span></a></li></ul></li><li><a href="">About</a></li>
+
+                </ul>
+            </div>
+                <div class = "theBody">
+                <div class="upperBlock">
+                    
+                <div class="research_group_title">Faculty</div></div>
+                <div class="right_column">
+                    <div class="contact">
+                        <img src="{{ cFaculty.img.url }}">
+                        <div>Contact</div>
+                        <div class="contactContent">
+                            {% autoescape off %}{{cFaculty.extrainf}}{% endautoescape %}
+                            </div>
+                        
+                    </div>
+                    <embed class="video" width="295" height="215"
+src="http://www.youtube.com/v/XGSy3_Czz8k">
+                    </div>    
+                    
+                <div class = "infoBlock">
+                    <ul class = "listLevel1"><!-- --><li class = "box1"><div class = "facultyNameBox"><div class="position">{{cFaculty.extrainf1}}</div><div class = "facultyName">{{cFaculty.name}}</div></div><div class = "aboutThisFaculty">
+                        {% autoescape off %}{{cFaculty.about}}{% endautoescape %}
+                        </div></li><!-- --><li class = "box1"><div>Latest Publications</div><div class = "thisPublications">
+                            {% for pub in publication_list %}
+                            {% for pubu in pub.author_set.all %}
+                            <ul>
+                                {% ifequal cFaculty.facultycode pubu.authorcode %}
+                                  <li><ul><li class="research_box_title"><a href = "/publication/{{ pub.pubDetail }}">{{pub.pubHeading}}</a></li><li class = "research_box_liner">{{pub.extra_inf}}</li></ul></li>
+                                {% endifequal %}
+                            </ul>
+                            {% endfor %}
+                            {% endfor %}
+                        </div></li><!-- --><li class = "box2"><div>Courses</div><div> <!--hash replaced by this.(researches.html)-->
+                        {% for fac in cFaculty.facultycoursecode_set.all %}    
+            
+                        {% for res in rgroup_list %}
+                        
+                        <ul>
+                            {% ifequal fac.fcoursecode res.title %}
+                            <li><ul><li class="course_code"><a href="/research/{{ res.title }}">{{res.title}}</a></li><li class = "course_name">{{res.category}}</li></ul></li>
+                            {% endifequal %}
+                        </ul>
+                        {% endfor %}
+                        {% for cor in course_list %}
+                        <ul>
+                            {% ifequal fac.fcoursecode cor.coursecode %}
+                            <li><ul><li class="course_code"><a href="/courses/{{ cor.coursecode }}">{{cor.coursecode}}</a></li><li class = "course_name">{{cor.coursename}}</li></ul></li>
+                            {% endifequal %}
+                        </ul>
+                        {% endfor %}
+                        {% endfor %}    
+                        </div></li>
+                    </ul>
+                </div>
+                    
+            </div>
+            
+            <div class = "footer"></div>
+            </div>
+        <div class = "longBar"></div>
+
+        
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+        <script src="/static/faculty/js/jQuery.js"></script>
+        <script src="/static/faculty/js/myJs.js"></script>
+        <script src="/static/faculty/js/responsiveslides.min.js"></script>
+        
+    </body>
+</html>

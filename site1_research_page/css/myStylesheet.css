@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,400,300);
+/****************************************** menu attributes */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', Segoe UI, 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 16px; }
+
+body {
+  background: -webkit-linear-gradient(#dcdcdc, #ffffff);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#dcdcdc, #ffffff);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#dcdcdc, #ffffff);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#dcdcdc, #ffffff);
+  /* Standard syntax */ }
+
+a {
+  text-decoration: none; }
+
+.container {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  background-color: white; }
+
+.header {
+  display: block;
+  color: #333333;
+  background-color: #fff;
+  height: 80px; }
+
+.header > img {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  height: 100%;
+  margin: 0 auto; }
+
+.header > div {
+  width: 30%;
+  position: relative;
+  display: inline-block;
+  margin-left: 150px;
+  text-align: right; }
+  .header > div span {
+    font-size: 12px;
+    font-weight: 800; }
+  .header > div span:nth-of-type(1) {
+    color: #333333; }
+  .header > div span:nth-of-type(2) {
+    color: #4D4D4D; }
+  .header > div span:nth-of-type(3) {
+    color: #666666; }
+  .header > div span:nth-of-type(4) {
+    color: #808080; }
+  .header > div span:nth-of-type(5) {
+    color: #3FADA8; }
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%; }
+  .header {
+    height: 160px; }
+  .header > img {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center; }
+  .header > div {
+    display: block;
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+    text-align: center; }
+    .header > div span {
+      font-size: 11px; } }
+
+/*# sourceMappingURL=myStylesheet.css.map */
