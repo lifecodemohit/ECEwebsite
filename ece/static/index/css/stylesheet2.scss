@@ -60,17 +60,17 @@ background: -webkit-linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /
 a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inherit}
 .container{
     display:block;
-    width: 868px;
+    width: 980px;
     margin:0  auto;
     background-color: white;
+    height: auto;
 }
 .header{
     display: block;
     color: $i1;
     background-color: $grey_body;
     
-    //border-bottom: 1px solid #fff; // border OF header
-    
+
          div:first-of-type{
          
              
@@ -84,17 +84,19 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
             width: 50%;
     }
         .ece_head{
+
+
             height: 30px;
             background-color: white ;
             position: relative;
             display: inline-block;
-            vertical-align: bottom;
+            vertical-align: middle;
+
             
-            margin: 0;
-            text-align: center;
-            padding-bottom: 20px;
+            text-align: right;
+            padding: 30px;
             width: 40%;
-            
+            float: right;
             span{font-size: 15px;font-weight: 800;}
             span:nth-of-type(1){color: $i1;}
             span:nth-of-type(2){color: $i2;}

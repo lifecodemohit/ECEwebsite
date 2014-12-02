@@ -61,7 +61,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'ECE',                      # Or path to database file if using sqlite3.
         'USER': 'root',
-        'PASSWORD': 'mohit1995',
+        'PASSWORD': '98765423',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
@@ -85,5 +85,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT='/home/lifecodemohit/Pictures/ECE/pic_folder'
+MEDIA_ROOT='./pic_folder'
 MEDIA_URL='/media/'
