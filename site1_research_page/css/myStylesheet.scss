@@ -1,0 +1,135 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,400,300);
+$font_stack: 'Raleway', Segoe UI, 'Raleway', sans-serif;
+$light_font: 400;
+$heavy_font:500;
+$i1 : #333333;
+$blue_header_font_weight : 500;
+
+@mixin bs($a:0,$b:0,$c:0,$d:0,$color:#000){
+    box-shadow: $a $b $c $d $color;
+    -webkit-box-shadow: $a $b $c $d $color;
+     -moz-box-shadow: $a $b $c $d $color;
+      -ms-box-shadow: $a $b $c $d $color;
+}
+
+@mixin bg($o){
+
+   background-color : rgba(51,51,51,$o);
+}
+@mixin bsn()//box-shadow-none
+{
+     box-shadow: none;
+    -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+      -ms-box-shadow:none
+}
+$i2 : #4D4D4D;
+$i3 : #666666;
+$i4 : #808080;
+$color_d : #3FADA8;
+$header_color : #fff;//#3FADA8;
+$header_content: #3FADA8;
+$header_height: 80px;
+/****************************************** menu attributes */ 
+$menu_background_color: rgba(255,255,255,1);//rgba(0,0,0,1);
+$menu_color: $i2;
+$drop_down_menu_color: rgba(0,0,0,0.65);//rgba(255,255,255,0.8);
+$drop_down_color : rgba(255,255,255,1);//$i1;
+
+
+$body_background: #fff;
+$height_header: 90px;
+$linec: #ddd;
+*{
+    margin:0;
+    padding: 0;
+    font-family: $font_stack;
+    font-weight: 200;
+    font-size: 16px;
+}
+body{
+    background: -webkit-linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(220,220,220,1), rgba(255,255,255,1)); /* Standard syntax */
+}
+a {text-decoration: none;}
+
+.container{
+    display:block;
+    width: 70%;
+    margin:0  auto;
+    background-color: white;
+}
+
+.header{
+    
+    display:block;
+    color: $i1;
+    background-color: $body_background;
+    height: $header_height;
+}
+.header > img {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    //float: left;
+    height: 100%;
+    margin: 0 auto;
+}
+.header > div{
+    
+    width:30%;
+    position: relative;
+    display: inline-block;
+    margin-left:150px;
+    text-align: right;
+     span{font-size: 12px;font-weight: 800;}
+            span:nth-of-type(1){color: $i1;}
+            span:nth-of-type(2){color: $i2;}
+            span:nth-of-type(3){color: $i3;}
+            span:nth-of-type(4){color: $i4;}
+            span:nth-of-type(5){color: $color_d;}
+}
+
+//@media screen and (max-width:964px){
+//    .container{
+//        width: 100%;
+//    }
+////    .header > img{
+////        display: block;
+////        margin: 0 auto ;
+////    }
+////     .header > div{
+////         
+////        display: block;
+////        width: 100%;
+////        margin: 0 auto;
+////        text-align: center;
+////    }
+////    
+//}
+@media screen and (max-width:800px){
+    .container{ 
+        width: 100%;
+    }
+    
+    .header{height: 2*$header_height;}
+    .header > img{
+        display: block;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+     .header > div{
+        display: block;
+        width: 100%;
+         float: none;
+        margin: 0 auto;
+        text-align: center;
+         span{font-size: 11px;}
+    }
+    
+    
+}

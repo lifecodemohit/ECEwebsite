@@ -1,0 +1,89 @@
+{% load static %}
+<html>
+    <head>
+        <title>ECE Research Group</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'index/css/stylesheet2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'index/css/slider_stylesheet.css' %}">
+    </head>
+    <body>
+        <div class = "longBar"></div>
+        <div class = "container">
+            
+            <div class = "header"><img src = "/static/logo/long_min_iiitd_colors.png" alt="IIITD"><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
+            </div>
+            <div class = "menu">
+                <ul>
+                    <li><a href = "#">Home</a></li><li><a href = "#" >Research</a>
+                    <ul><li><a href = "#"><span>Research Group 1</span></a></li><br><li><a href = "#"><span>Research Group 2</span></a></li><br><li><a href = "#"><span>Research Group 3</span></a></li><br><li><a href = "#"><span>Research Group 4</span></a></li></ul>
+                    </li><li><a href = "#">Publications</a></li><li><a href="#">People</a><ul><li><a href = "#"><span>Faculty</span></a></li><br><li><a href = "#"><span>Students</span></a></li></ul></li><li><a href="">About</a></li>
+
+                </ul>
+            </div>
+                <div class = "theBody">
+                <div class="upperBlock">
+                    
+                    <div class="rslides_container" class="slider" id="home">
+            <ul class="rslides" id="slider1">
+            {% for img in homepage_slider %}
+                <li><img src="{{ img.img1.url }}" alt=""></li>
+                <li><img src="{{ img.img2.url }}" alt=""></li>
+                <li><img src="{{ img.img3.url }}" alt=""></li>
+                <li><img src="{{ img.img4.url }}" alt=""></li>
+                <li><img src="{{ img.img5.url }}" alt=""></li>
+                <li><img src="{{ img.img6.url }}" alt=""></li>
+            {% endfor %} 
+            </ul></div>
+                </div>
+                   
+                <div class = "infoBlock" >
+                    <ul class = "listLevel1"><li class = "box1"><div style="padding-top:5px;padding-bottom:5px;"><a href = "#">Latest News</a></div><div class = "resBoxText"> <!--hash replaced by this.(researches.html)-->
+                        {% if latest_news_list %}
+                        <ul>
+                            {% for news in latest_news_list %}
+                            <li><ul><li class="research_box_title"><a href = "research/news/{{ news.id }}/">{{ news.heading }}</a></li><li class = "research_box_liner">{{ news.main_text }}</li></ul></li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p></p>
+                        {% endif %}
+                        </div></li><!-- --><li class = "box2"><div style="padding-top:5px;padding-bottom:5px;"><a href="#">Upcoming Events</a></div><div class = "pubBoxText">
+                        {% if latest_events_list %}
+                        <ul>
+                            {% for event in latest_events_list %}
+                            <li><ul><li class="research_box_title"><a href = "research/events/{{ event.id }}">{{ event.heading }}</a></li><li class = "research_box_liner">{{ event.main_text }}</li></ul></li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p></p>
+                        {% endif %}
+                        </div></li><!-- --><li class = "box3" ><div style="padding-top:5px;padding-bottom:5px;"><a href="#">Latest Publications</a></div><div class = "awardBoxText">
+                        {% if latest_publication_list %}
+                        <ul>
+                            {% for pub in latest_publication_list %}
+                            <li><ul><li class="research_box_title"><a href = "publication/{{ pub.pubDetail }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf }}</li></ul></li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p></p>
+                        {% endif %}
+                        </div></li>
+                    </ul>
+                </div>
+                    <embed class="video" width="280" height="215"
+src="http://www.youtube.com/v/XGSy3_Czz8k">
+            </div>
+            
+            <div class = "footer"></div>
+            </div>
+        <div class = "longBar"></div>
+
+        
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+        <script src="/static/index/js/jQuery.js"></script>
+        <script src="/static/index/js/myJs.js"></script>
+        <script src="/static/index/js/responsiveslides.min.js"></script>
+        
+    </body>
+</html>

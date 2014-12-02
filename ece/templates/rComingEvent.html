@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ECE Research Group Website</title>
+</head>
+<body>
+	<h1>Hello World.....</h1>
+	{% if comingevent_list %}
+    <ul>
+    {% for event in comingevent_list %}
+    	<a href="{{ event.id }}/">{{ event.heading }}</a>
+        <p>{{ event.category }}</p>
+        <p>{{ event.pub_date }}</p>
+        <p>{{ event.main_text }}</p>
+    {% endfor %}
+    </ul>
+	{% else %}
+	    <p>No coming events are available.</p>
+	{% endif %}
+</body>
+</html>

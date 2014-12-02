@@ -1,0 +1,66 @@
+{% load static %}
+<html>
+
+    <head>
+        <title>ECE Research Group</title>
+         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'allFacPage/css/stylesheet2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'allFacPage/css/slider_stylesheet.css' %}">
+    </head>
+    <body>
+        <div class = "longBar"></div>
+        <div class = "container">
+            
+            <div class = "header"><img src = "/static/logo/long_min_iiitd_colors.png" alt="IIITD"><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
+            </div>
+            <div class = "menu">
+                <ul>
+                    <li><a href = "#" tabindex="1">Home</a></li><li><a href = "#" tabindex="2">Research</a>
+                    <ul><li><a href = "#"><span>Research  1</span></a></li><br><li><a href = "#"><span>Research Group 2</span></a></li><br><li><a href = "#"><span>Research Group 3</span></a></li><br><li><a href = "#"><span>Research Group 4</span></a></li></ul>
+                    </li><li><a href = "#" tabindex="3">Publications</a></li><li><a href="#" tabindex="4">People</a><ul><li><a href = "#" tabindex="5"><span>Faculty</span></a></li><br><li><a href = "#"><span>Students</span></a></li></ul></li><li><a href="">About</a></li>
+
+                </ul>
+            </div>
+                <div class = "theBody">
+                <div class="upperBlock">
+                <div class="research_group_title">Faculty</div></div>
+                    
+                <div class = "infoBlock">
+                    
+                    <ul class = "faculty_ul">
+                         <li><div class="namee">Name</div><div class = "maill">Mail</div><div class = "coursess">Courses</div><div class = "intrestt">Intrests</div></li>
+                         {% for fac in faculty_list %}
+                        <li><img src="{{ fac.img.url }}"><div class="facName"><a href="/faculty/{{ fac.facultycode }}">{{fac.name}}<!-- add name field and then its position field ex atul jain assitant professor --> | 
+{{fac.extrainf1}}</a></div><div class="facMail">extrainf3</div>
+  
+<div class="facResGrp">{% for fac1 in fac.facultycoursecode_set.all %}
+{% for res in rgroup_list %}
+{% ifequal fac1.fcoursecode res.title %}
+<a href="/research/{{ res.title }}">{{res.category}}  ,  </a>
+{% endifequal %}<!-- in a's href add this research's page url => every research page has its own url field-->{% endfor %}
+{% for cor in course_list %}
+{% ifequal fac1.fcoursecode cor.coursecode %}
+<a href="/courses/{{ cor.coursecode }}">{{cor.coursename}}  ,  </a>
+{% endifequal %}<!-- in a's href add this research's page url => every research page has its own url field-->{% endfor %}{% endfor %}</div>
+
+                <div class="facIntrests">extrainf2</div></li>
+                        {% endfor %}
+                    </ul>
+                    
+                </div>
+                    
+            </div>
+            
+            <div class = "footer"></div>
+            </div>
+        <div class = "longBar"></div>
+
+        
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+        <script src="/static/allFacPage/js/jQuery.js"></script>
+        <script src="/static/allFacPage/js/myJs.js"></script>
+        <script src="/static/allFacPage/js/responsiveslides.min.js"></script>
+        
+    </body>
+</html>
