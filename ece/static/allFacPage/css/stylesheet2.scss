@@ -1,8 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:500,400,300);
-/* fonts available : 500,400italic,400 */
-$font_stack: 'Raleway', Segoe UI, 'Raleway', sans-serif;
-$light_font: 400;
-$heavy_font:500;
+$font_stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$light_font: 100;
+$heavy_font:300;
 $i1 : #333333;
 $blue_header_font_weight : 500;
 @mixin bg($o){

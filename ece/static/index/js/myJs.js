@@ -13,7 +13,7 @@ $(window).load(function(){
     startSlider();
     
     
-    //infoblock_ul = $(".listlevel1:nth-child(0)");
+  var resizeColumns = function(){  //infoblock_ul = $(".listlevel1:nth-child(0)");
     var col1 = $(".box1");
     var col2 = $(".box2");
     var col3 = $(".box3");
@@ -33,6 +33,9 @@ $(window).load(function(){
 //    col3.css("height",""+max_col_ht + " !important");
     col1.height(max_col_ht);
     col2.height(max_col_ht);
-    col3.height(max_col_ht);
+    col3.height(max_col_ht);}
+
+  resizeColumns();
+    $(window).on('zoom', resizeColumns);
     
           });
