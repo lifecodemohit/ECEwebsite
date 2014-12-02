@@ -91,7 +91,7 @@ a {
 
 /* line 124, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .menu > ul {
-  cursor: context-menu; }
+  cursor: auto; }
 
 /* line 130, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .menu > ul > li {
@@ -159,7 +159,7 @@ a {
 
 /* line 205, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .theBody {
-  cursor: context-menu;
+  cursor: auto;
   width: 100%;
   background-color: #fff; }
 

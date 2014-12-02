@@ -123,7 +123,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 }
     .menu >ul{
         
-        cursor: context-menu;
+        cursor: auto;
         //@include bs(0px,-1px,0px,1px,$color_d);
         
     }
@@ -204,7 +204,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 
 .theBody{
     
-    cursor: context-menu;
+    cursor: auto;
     width: 100%;
     //height:  auto;
    background-color: $grey_body;
