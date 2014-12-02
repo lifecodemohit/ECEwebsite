@@ -201,18 +201,8 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     //margin-top: 0;
     //margin-top: -10px;
 }
-    .research_group_title{
-        padding: 20px 0;
-        width: 100%;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        color:$i3
-          
-    
-       
-        
-    }
+
+
 
     .infoBlock{
         /*border-top: 1px solid $i4;*/ //line above info block
@@ -222,7 +212,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         position: relative;
 //        left: -7px;
     }  
-    .infoBlock>ul{width: 100%;}
+    .infoBlock>ul{width: 100%;margin-top: 40px;}
         .listLevel1 > li {
             
             vertical-align: top;
@@ -236,31 +226,29 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
             font-weight: $heavy_font;
             color: white;
            
-            div:nth-child(1){
+
+            
+             div:nth-of-type(2) { // this is below research headline BOX
+                 
+                position: relative;
+                width: 100%;
+
+                 //padding: 10px 10px;
+                 display: block;
+                width:100%;
+             }
+        }
+.listLevel1 > li > div:nth-child(1){
             display: block;
             height: 40px;
             background-color: $color_d;
             width: 100%;
             line-height: 40px;
              font-weight: $blue_header_font_weight;
-           
-        }
-            div:nth-child(1) > a:hover{text-decoration: underline;}
-            
-             div:nth-of-type(2) { // this is below research headline BOX
-                 
-                position: relative;
-                width: 100%;
-                min-height: 250px;
-                 //padding: 10px 10px;
-                 display: block;
-                width:100%;
-             }
+           a:hover{text-decoration: underline;}
         }
 
        ul{
-
-
                      li{
 
                          position: relative;
@@ -270,18 +258,19 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
                          font-size: 13px;
                          font-weight: 400;
                          color: #000;
-                         margin: 10px 0;
+
 
 
                     }
 
 
              }
-             .listLevel1 > li >  div:nth-of-type(2)  > ul > li:nth-of-type(n+2){ @include bs(0px,-1px,0px,0px,$linec);}
+             .listLevel1 > li >  div:nth-of-type(2)  > ul >li:nth-last-of-type(n+2){@include bs(0px,1px,0px,0px,$linec);}
 
                .listLevel1 > li >  div:nth-of-type(2)  > ul > li >ul{ 
                    width: 92%;
-                   padding:0 10px;
+                   padding:0 10px 10px 10px;
+                   margin-bottom: 10px;
                    
                             
                              
@@ -292,7 +281,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
                          font-weight: $heavy_font;
                          color: $color_d;
                          margin: 0;
-                       padding-top: 10px;
+                        padding-bottom: 4px;
 
                      }
                  li:nth-of-type(1):hover{text-decoration: underline;}
@@ -309,10 +298,16 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 
     }
     
-
+.dateLine{
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-size: 9px;
+    color: #666;
+}
 
 .research_box_title > a{
     font-weight: $heavy_font;
+
 }
 
 .magicLine{
@@ -337,7 +332,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     display: inline-block;
     //border: 1px solid red;
     vertical-align: top;
-    padding: 42px 0;
+    padding: 10px 0;
     font-size: 34px;
     background-color: $color_d;
     color: white;
@@ -347,10 +342,11 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     width: 66%;
     display: inline-block;
     //border: 1px solid red;
+
     padding: 0;
     margin: 0;
     div { //the four divs
-
+        vertical-align: top;
         width: 49%;
         display: inline-block;
         ul{

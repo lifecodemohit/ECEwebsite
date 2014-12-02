@@ -163,16 +163,7 @@ a {
   width: 100%;
   background-color: #fff; }
 
-/* line 204, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
-.research_group_title {
-  padding: 20px 0;
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  color: #666666; }
-
-/* line 217, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 207, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .infoBlock {
   /*border-top: 1px solid $i4;*/
   width: 95%;
@@ -180,11 +171,12 @@ a {
   display: block;
   position: relative; }
 
-/* line 225, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 215, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .infoBlock > ul {
-  width: 100%; }
+  width: 100%;
+  margin-top: 40px; }
 
-/* line 226, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 216, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .listLevel1 > li {
   vertical-align: top;
   display: inline-block;
@@ -195,58 +187,58 @@ a {
   text-align: center;
   font-weight: 300;
   color: white; }
-  /* line 239, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
-  .listLevel1 > li div:nth-child(1) {
-    display: block;
-    height: 40px;
-    background-color: #3FADA8;
-    width: 100%;
-    line-height: 40px;
-    font-weight: 500; }
-  /* line 248, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
-  .listLevel1 > li div:nth-child(1) > a:hover {
-    text-decoration: underline; }
-  /* line 250, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+  /* line 231, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
   .listLevel1 > li div:nth-of-type(2) {
     position: relative;
     width: 100%;
-    min-height: 250px;
     display: block;
     width: 100%; }
 
-/* line 264, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 241, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+.listLevel1 > li > div:nth-child(1) {
+  display: block;
+  height: 40px;
+  background-color: #3FADA8;
+  width: 100%;
+  line-height: 40px;
+  font-weight: 500; }
+  /* line 248, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+  .listLevel1 > li > div:nth-child(1) a:hover {
+    text-decoration: underline; }
+
+/* line 252, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 ul li {
   position: relative;
   width: 100%;
   text-align: left;
   font-size: 13px;
   font-weight: 400;
-  color: #000;
-  margin: 10px 0; }
+  color: #000; }
 
-/* line 280, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
-.listLevel1 > li > div:nth-of-type(2) > ul > li:nth-of-type(n+2) {
-  box-shadow: 0px -1px 0px 0px #ddeeee;
-  -webkit-box-shadow: 0px -1px 0px 0px #ddeeee;
-  -moz-box-shadow: 0px -1px 0px 0px #ddeeee;
-  -ms-box-shadow: 0px -1px 0px 0px #ddeeee; }
+/* line 268, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+.listLevel1 > li > div:nth-of-type(2) > ul > li:nth-last-of-type(n+2) {
+  box-shadow: 0px 1px 0px 0px #ddeeee;
+  -webkit-box-shadow: 0px 1px 0px 0px #ddeeee;
+  -moz-box-shadow: 0px 1px 0px 0px #ddeeee;
+  -ms-box-shadow: 0px 1px 0px 0px #ddeeee; }
 
-/* line 282, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 270, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .listLevel1 > li > div:nth-of-type(2) > ul > li > ul {
   width: 92%;
-  padding: 0 10px; }
-  /* line 288, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+  padding: 0 10px 10px 10px;
+  margin-bottom: 10px; }
+  /* line 277, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
   .listLevel1 > li > div:nth-of-type(2) > ul > li > ul li:nth-of-type(1) {
     width: 100%;
     font-size: 14px;
     font-weight: 300;
     color: #3FADA8;
     margin: 0;
-    padding-top: 10px; }
-  /* line 298, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+    padding-bottom: 4px; }
+  /* line 287, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
   .listLevel1 > li > div:nth-of-type(2) > ul > li > ul li:nth-of-type(1):hover {
     text-decoration: underline; }
-  /* line 299, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+  /* line 288, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
   .listLevel1 > li > div:nth-of-type(2) > ul > li > ul li:nth-of-type(2) {
     width: 100%;
     position: relative;
@@ -254,11 +246,18 @@ ul li {
     font-size: 13px;
     font-weight: 100; }
 
-/* line 314, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 301, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+.dateLine {
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-size: 9px;
+  color: #666; }
+
+/* line 308, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .research_box_title > a {
   font-weight: 300; }
 
-/* line 318, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 313, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .magicLine {
   height: 1px;
   overflow: hidden;
@@ -267,7 +266,7 @@ ul li {
   margin: 0 auto;
   margin-top: 15px; }
 
-/* line 327, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 322, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .lowerBody {
   width: 95%;
   margin: 0 auto;
@@ -275,52 +274,53 @@ ul li {
   display: block;
   position: relative; }
 
-/* line 335, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 330, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .lowerBody > div:nth-of-type(1) {
   width: 33%;
   display: inline-block;
   vertical-align: top;
-  padding: 42px 0;
+  padding: 10px 0;
   font-size: 34px;
   background-color: #3FADA8;
   color: white;
   text-align: center; }
 
-/* line 346, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 341, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .rgSummaryBox {
   width: 66%;
   display: inline-block;
   padding: 0;
   margin: 0; }
-  /* line 352, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+  /* line 348, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
   .rgSummaryBox div {
+    vertical-align: top;
     width: 49%;
     display: inline-block; }
-    /* line 356, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+    /* line 352, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
     .rgSummaryBox div ul {
       width: 95%;
       margin: 0 auto; }
-    /* line 360, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+    /* line 356, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
     .rgSummaryBox div ul > li {
       margin: 0; }
-    /* line 361, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+    /* line 357, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
     .rgSummaryBox div ul > li:nth-of-type(1) {
       width: 100%;
       padding: 5px 0;
       font-weight: 300;
       color: #3FADA8;
       font-size: 15px; }
-    /* line 368, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+    /* line 364, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
     .rgSummaryBox div ul > li:nth-of-type(2) {
       width: 100%;
       padding: 5px 0;
       font-weight: 100; }
 
-/* line 375, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 371, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .video {
   padding: 20px; }
 
-/* line 380, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 376, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .footer {
   margin-top: 30px;
   display: block;
@@ -328,7 +328,7 @@ ul li {
   height: 90px;
   background-color: #3FADA8; }
 
-/* line 387, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 383, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .longBar:first-of-type {
   width: 100%;
   height: 25px;
@@ -338,7 +338,7 @@ ul li {
   -ms-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3);
   background-color: #d1d9de; }
 
-/* line 394, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
+/* line 390, /home/atul/Documents/web/ece/gitRepo/ece/static/index/css/stylesheet2.scss */
 .longBar:last-of-type {
   width: 100%;
   height: 25px;

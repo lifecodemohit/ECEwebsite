@@ -43,7 +43,7 @@
                         {% if latest_news_list %}
                         <ul>
                             {% for news in latest_news_list %}
-                            <li><ul><li class="research_box_title"><a href = "research/news/{{ news.id }}/">{{ news.heading }}</a></li><li class = "research_box_liner">{{ news.main_text }}</li></ul></li>
+                            <li><ul><div class="dateLine">29th December 2014</div><li class="research_box_title"><a href = "research/news/{{ news.id }}/">{{ news.heading }}</a></li><li class = "research_box_liner">{{ news.main_text }}</li></ul></li>
                             {% endfor %}
                         </ul>
                         {% else %}
@@ -53,7 +53,7 @@
                         {% if latest_events_list %}
                         <ul>
                             {% for event in latest_events_list %}
-                            <li><ul><li class="research_box_title"><a href = "research/events/{{ event.id }}">{{ event.heading }}</a></li><li class = "research_box_liner">{{ event.main_text }}</li></ul></li>
+                            <li><ul><div class="dateLine">29th December 2014</div><li class="research_box_title"><a href = "research/events/{{ event.id }}">{{ event.heading }}</a></li><li class = "research_box_liner">{{ event.main_text }}</li></ul></li>
                             {% endfor %}
                         </ul>
                         {% else %}
@@ -63,7 +63,7 @@
                         {% if latest_publication_list %}
                         <ul>
                             {% for pub in latest_publication_list %}
-                            <li><ul><li class="research_box_title"><a href = "publication/{{ pub.pubDetail }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf }}</li></ul></li>
+                            <li><ul><div class="dateLine">29th December 2014</div><li class="research_box_title"><a href = "publication/{{ pub.pubDetail }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf }}</li></ul></li>
                             {% endfor %}
                         </ul>
                         {% else %}
