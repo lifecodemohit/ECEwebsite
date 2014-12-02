@@ -327,18 +327,21 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     position: relative;
 
 }
-.lowerBody > div:nth-of-type(1){
+.lowerBody > object{
     width: 33%;
     display: inline-block;
     //border: 1px solid red;
     vertical-align: top;
-    padding: 10px 0;
-    font-size: 34px;
-    background-color: $color_d;
     color: white;
     text-align: center;
+    .video{
+        width: 33%;
+        height: 200px;
+    }
 }
+
 .rgSummaryBox{
+
     width: 66%;
     display: inline-block;
     //border: 1px solid red;
@@ -356,22 +359,19 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         ul > li{margin:0;}
         ul > li:nth-of-type(1){
             width: 100%;
-            padding: 5px 0;
+            padding: 4px 1px 0 0;
             font-weight: $heavy_font;
             color: $color_d;
             font-size: 15px;
         }
         ul > li:nth-of-type(2){
             width: 100%;
-            padding: 5px 0;
+            padding: 5px 1px 0  0;
             font-weight: $light_font;
         }
     }
 }
-.video{
-    
-    padding:20px;
-}
+.rgSummaryBox >  div > ul > li > a{text-decoration: underline; }
 
 .footer{
     margin-top:30px;
