@@ -1,8 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:500,400,300);
-/* fonts available : 500,400italic,400 */
-$font_stack: 'Raleway', Segoe UI, 'Raleway', sans-serif;
-$light_font: 400;
-$heavy_font:500;
+$font_stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$light_font: 100;
+$heavy_font:300;
 $i1 : #333333;
 $blue_header_font_weight : 500;
 @mixin bg($o){
@@ -69,6 +67,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     color: $i1;
     background-color: $grey_body;
 
+
         .ece_head{
             
             
@@ -76,7 +75,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
             background-color: white ;
             position: relative;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
             
             
             text-align: right;
@@ -94,6 +93,35 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         }
 
 }
+
+
+
+
+
+.theBody{
+
+    cursor: context-menu;
+    width: 100%;
+    //height:  auto;
+   background-color: $grey_body;
+    padding: 0;
+    //padding: 0 10px;
+    //margin-top: 0;
+    //margin-top: -10px;
+}
+    .research_group_title{
+        padding: 20px 0;
+        width: 40%;
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        color:$i3
+
+
+
+
+    }
 .menu2{
     clear: both;
     width: 100%;
@@ -103,9 +131,9 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 
 
 }
-
  .menu2 >ul{
-        
+
+       width: 100%;
         cursor: context-menu;
         //@include bs(0px,-1px,0px,1px,$color_d);
         
@@ -124,42 +152,18 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         font-size: 16px ;
         text-align: center;
         //padding: 5px 0;
-        color: $menu_color ;font-weight: 600;font-size: 13px;
+        color: $menu_color ;font-weight: $heavy_font;font-size: 13px;
         
     }
-.menu2 > ul > li > a{position: relative;display: block; width:auto ;  color: $menu_color ;font-weight: 600;font-size: 13px;/*line-height: 40px;*/}
- 
-  
-   
+.menu2 > ul > li > a{position: relative;display: inline-block; width:auto ;  color: $menu_color ;font-weight: 600;font-size: 13px;/*line-height: 40px;*/}
+    .theBodyDiv{
 
 
-
-
-
-          
-
-
-
-.theBody{
-    
-    cursor: context-menu;
-    width: 100%;
-    //height:  auto;
-   background-color: $grey_body;
-    padding: 0;
-    //padding: 0 10px;
-    //margin-top: 0;
-    //margin-top: -10px;
-}
-        .research_group_title{
-        padding: 20px 0;
-        width: 40%;
-        display: inline-block;
+        display:  inline-block;
         text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        color:$i3
-        
+        @include bs(0px,1px,5px,0px,$i3);
+        width: 100%;
+
     }
     .theBodyDiv{
         
