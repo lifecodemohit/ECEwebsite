@@ -13,14 +13,7 @@
             
             <div class = "header"><div class="research_group_title">{{cGroup.category}}</div><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
             </div>
-            <div class = "menu">
-                <ul>
-                    <li><a href = "#">Home</a></li><li><a href = "#" >Research</a>
-                    <ul><li><a href = "#"><span>Research Group 1</span></a></li><br><li><a href = "#"><span>Research Group 2</span></a></li><br><li><a href = "#"><span>Research Group 3</span></a></li><br><li><a href = "#"><span>Research Group 4</span></a></li></ul>
-                    </li><li><a href = "#">Publications</a></li><li><a href="#">People</a><ul><li><a href = "#"><span>Faculty</span></a></li><br><li><a href = "#"><span>Students</span></a></li></ul></li><li><a href="">About</a></li>
 
-                </ul>
-            </div>
                 <div class = "theBody">
                 <div class="upperBlock">
 
@@ -43,7 +36,17 @@
                         <ul>
                             {% ifequal cGroup.title facu.fcoursecode %}
                               <!--<li><div>{{facu.fcoursecode}}</div></li>!-->
-                              <li><ul><li class="people_left"><a href = "/faculty/{{ faculty.facultycode }}">{{faculty.name}}</a></li><li class = "people_right">{{facu.extrainf}}</li></ul></li>
+                              <li><ul><li class="people_left"><a href = "/faculty/{{ faculty.facultycode }}">{{faculty.name}}</a></li><li class = "people_right">{{facu.extrainf}}</li>
+                                  <li class="labsListeItem">
+                                   <a href="#">Lab 1</a>
+                                      <a href="#">Lab  OMFG SBDSGDSHDG kbacnd asdfhakj dsbfsd ds,mnfdn ,mdsnf d</a>
+                                      <a href="#">Lab 1</a>
+                                      <a href="#">Lab 1</a>
+                                      <a href="#">Lab 1</a>
+                                      <a href="#">Lab 1</a>
+                                      <a href="#">Lab 1</a>
+                                  </li>
+                                  </ul></li>
                             {% endifequal %}
                         </ul>
                         {% endfor %}
