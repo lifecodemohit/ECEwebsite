@@ -6,13 +6,12 @@
          <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="{% static 'researchPage/css/stylesheet2.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'researchPage/css/slider_stylesheet.css' %}">
     </head>
     <body>
         <div class = "longBar"></div>
         <div class = "container">
             
-            <div class = "header"><img src = "/static/logo/long_min_iiitd_colors.png" alt="IIITD"><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
+            <div class = "header"><div class="research_group_title">{{cGroup.category}}</div><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
             </div>
             <div class = "menu">
                 <ul>
@@ -24,22 +23,9 @@
             </div>
                 <div class = "theBody">
                 <div class="upperBlock">
+
                     
-                    <div class="rslides_container" class="slider" id="home">
-            <ul class="rslides" id="slider1">
-                <li><img src="{{ cGroup.img1.url }}" alt=""></li>
-                <li><img src="{{ cGroup.img2.url }}" alt=""></li>
-                <li><img src="{{ cGroup.img3.url }}" alt=""></li>
-                <li><img src="{{ cGroup.img4.url }}" alt=""></li>
-                <li><img src="{{ cGroup.img5.url }}" alt=""></li>
-            </ul></div>
-                    <div class="research_group_title">{{cGroup.category}}</div></div>
-                    <div class="about">
-                        <div>About</div>
-                        <div class="aboutContent">
-                            <img src = "{{ cGroup.img6.url }}"/>
-                        {% autoescape off %}{{cGroup.about}}{% endautoescape %}</div>
-                    </div>
+
                 <div class = "infoBlock">
                     <ul class = "listLevel1"><!-- --><li class = "box1"><div><a href="/publication/">Latest Publications</a></div><div class = "pubBoxText">
                         {% if publication_list %}
@@ -65,8 +51,13 @@
                         </div></li>
                     </ul>
                 </div>
-                    <embed class="video" width="310" height="215"
-src="http://www.youtube.com/v/XGSy3_Czz8k">
+                     <div class="about">
+                        <div>About</div>
+                        <div class="aboutContent">
+                            <img src = "{{ cGroup.img6.url }}"/>
+                        {% autoescape off %}{{cGroup.about}}{% endautoescape %}</div>
+                    </div>
+
             </div>
             
             <div class = "footer"></div>
