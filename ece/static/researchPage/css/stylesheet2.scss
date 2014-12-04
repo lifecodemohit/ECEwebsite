@@ -375,6 +375,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     vertical-align: top;
 }
 .labsListeItem{
+    margin-left: 10px;
     margin-top: 10px;
     text-align: justify;
     width: 55%  ;
@@ -385,6 +386,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     height: auto;
     vertical-align: top;
 }
+.labsListeItem:last-of-type{margin-bottom:20px;}
 .labsListeItem > a{
     display: block;
     text-align:left;
@@ -404,7 +406,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     background-color: $color_d;
 }
 .longBar{
-    min-width: 980px;
+    min-width: 960px;
     width: 100%;
     height:25px;
 }
