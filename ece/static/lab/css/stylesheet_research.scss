@@ -110,6 +110,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 
         
     }
+
        .menu2{
 
            clear:both;
@@ -243,6 +244,8 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     cursor: grabbing !important;
     
 }
+.research_head:hover {text-decoration: underline;}
+.research_head:nth-of-type(n+2){border-top: 1px solid white;    }
 .research_dropdown{
     width: 96%;
     padding: 1% 2%;
