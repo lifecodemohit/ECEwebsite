@@ -73,18 +73,17 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         .ece_head{
             
             
-            height: 30px;
+           height: 30px;
             background-color: white ;
             position: relative;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
             
             
             text-align: right;
             padding: 30px;
             width: 40%;
-            vertical-align: top;/////this to be added
-            margin-right: -10px;/////this to be added
+            float: right;
             span{font-size: 15px;font-weight: 800;}
             span:nth-of-type(1){color: $i1;}
             span:nth-of-type(2){color: $i2;}
@@ -92,12 +91,14 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
             span:nth-of-type(4){color: $i4;}
             span:nth-of-type(5){color: $color_d;}
             
+
 //            box-shadow: -1px 1px 0px #fff;
         }
 
+
 }
-    .research_group_title{
-        padding: 20px 0;
+ .research_group_title{
+      padding: 20px 0;
         width: 40%;
         display: inline-block;
         text-align: center;
@@ -109,12 +110,13 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 
         
     }
-.menu2{
-    clear: both;
+       .menu2{
+
+           clear:both;
+    margin-top:10px;
     width: 100%;
     background-color: $menu_background_color;
-    //margin: 0 auto;
-           margin-top:10px;
+
     
     
 }
@@ -131,7 +133,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         //@include bs(0px,1px,0px,1px,$color_d);
         margin: 1px 0px;
         display: inline-block;
-        width: 25%;
+        width: 24%;
         /*height:40px;
         vertical-align: middle;*/
         //padding: 10px 0;
@@ -214,15 +216,16 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     height: $height_header;
     background-color: $color_d;
 }
-.longBar{width: 1400px;
-    height:25px;
-}
 .longBar:first-of-type{
+    width: 100%;
+    height:25px;
     @include bs(0,1px,1px,0px,rgba(0,0,0,.3));
     
     background-color: #d1d9de;
 }
 .longBar:last-of-type{
+    width: 100%;
+    height:25px;
     //@include bs(0,1px,1px,0px,rgba(0,0,0,.3));
     @include bs(0,-1px,1px,0px,rgba(0,0,0,.3));
     background-color: #d1d9de;

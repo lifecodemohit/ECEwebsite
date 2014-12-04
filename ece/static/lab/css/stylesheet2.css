@@ -44,7 +44,7 @@ a {
     background-color: white;
     position: relative;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: right;
     padding: 30px;
     width: 40%;

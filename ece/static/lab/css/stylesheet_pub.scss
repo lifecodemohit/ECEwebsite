@@ -1,8 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:500,400,300);
-/* fonts available : 500,400italic,400 */
-$font_stack: 'Raleway', Segoe UI, 'Raleway', sans-serif;
-$light_font: 400;
-$heavy_font:500;
+$font_stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$light_font: 100;
+$heavy_font:300;
 $i1 : #333333;
 $blue_header_font_weight : 500;
 @mixin bg($o){
@@ -45,7 +43,7 @@ $linec: #ffefff;
     border: none;
     font-family: $font_stack !important;
     font-weight: 100 ;
-    
+    list-style: none;
 
 }
 body{
@@ -68,20 +66,8 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     display: block;
     color: $i1;
     background-color: $grey_body;
-    
-  
-         div:first-of-type{
-         
-             
-             //background-color: rgba(220,220,220,1);
-         }
-        img{
 
-            display: inline-block;
-            position: relative;
-//            height: 100px;
-            width: 50%;
-    }
+
         .ece_head{
             
             
@@ -89,7 +75,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
             background-color: white ;
             position: relative;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
             
             
             text-align: right;
@@ -108,127 +94,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 
 }
 
-.menu{
 
-    margin-top:10px;
-    width: 100%;
-    background-color: $menu_background_color;
-    
-    border-bottom: 2px solid $color_d;
-    
-    
-}
-    .menu >ul{
-        
-        cursor: context-menu;
-        //@include bs(0px,-1px,0px,1px,$color_d);
-        
-    }
-    .menu > ul > li{
-        
-        
-        padding: 5px 0;
-        //@include bs(0px,1px,0px,1px,$color_d);
-        margin: 1px 0px;
-        display: inline-block;
-        width: 20%;
-        /*height:40px;
-        vertical-align: middle;*/
-        //padding: 10px 0;
-        font-size: 16px ;
-        text-align: center;
-        //padding: 5px 0;
-        color: $menu_color ;font-weight: 600;font-size: 13px;
-        
-    }
-.menu > ul > li > a{position: relative;display: block; width:auto ;  color: $menu_color ;font-weight: 600;font-size: 13px;/*line-height: 40px;*/}
-
-    .menu > ul > li:nth-child(n+1){
-    //border-right: 1px solid #fff;
-//          @include bs(-5px,0px,5px,0,$linec);
-            color: rgba(255,255,255,1) ;
-            margin-bottom: 0;
-    }
-    /*DROP DOWN */
-   .menu > ul > li > ul{
-        
-            background-color:$drop_down_menu_color;//rgba(0,0,0,0.7);
-            display: none;
-          position: absolute;
-       margin-top: 5px;
-           z-index: 50;
-        
-        padding: 4px 0px;
-        border-bottom: 1px solid $color_d;
-        border-left: 1px solid $color_d;
-        border-right: 1px solid $color_d;
-       
-        li{
-            margin: 5px 10px;
-            width: 180px ;
-            //min-width: 20%;
-            box-shadow: none ;
-            text-align: center;
-            a{
-                //line-height: 0;
-                font-size:12px ;
-                font-weight: 800 ;
-                color: $drop_down_color;
-                font-size: 11px;
-                white-space: nowrap; /*removed the overlapping of group names*/
-                
-            }
-        }
-
-       
-}
-  
-.menu>ul > li:hover > ul{display: block;}
-//.menu>ul > li > ul:hover {display: block;}
-   .menu > ul  li:hover > a {color:$color_d;}
-        
-       .menu2{
-           
-    margin-top:10px;
-    width: 60%;
-    background-color: $menu_background_color;
-    margin: 0 auto;
-    
-    
-}
- .menu2 >ul{
-        
-        cursor: context-menu;
-        //@include bs(0px,-1px,0px,1px,$color_d);
-        
-    }
-    .menu2 > ul > li{
-        
-        
-        padding: 5px 0;
-        //@include bs(0px,1px,0px,1px,$color_d);
-        margin: 1px 0px;
-        display: inline-block;
-        width: 25%;
-        /*height:40px;
-        vertical-align: middle;*/
-        //padding: 10px 0;
-        font-size: 16px ;
-        text-align: center;
-        //padding: 5px 0;
-        color: $menu_color ;font-weight: 600;font-size: 13px;
-        
-    }
-.menu2 > ul > li > a{position: relative;display: block; width:auto ;  color: $menu_color ;font-weight: 600;font-size: 13px;/*line-height: 40px;*/}
- 
-  
-   
-
-
-
-
-
-          
 
 
 
@@ -245,16 +111,51 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
 }
     .research_group_title{
         padding: 20px 0;
-        width: 100%;
+        width: 40%;
+        display: inline-block;
         text-align: center;
         font-size: 20px;
         font-weight: 500;
         color:$i3
-          
-    
-       
+
+
+
         
     }
+.menu2{
+    clear: both;
+    width: 100%;
+    background-color: $menu_background_color;
+    //margin: 0 auto;
+           margin-top:10px;
+    
+    
+}
+ .menu2 >ul{
+
+       width: 100%;
+        cursor: context-menu;
+        //@include bs(0px,-1px,0px,1px,$color_d);
+        
+    }
+    .menu2 > ul > li{
+        
+        
+        padding: 5px 0;
+        //@include bs(0px,1px,0px,1px,$color_d);
+        margin: 1px 0px;
+        display: inline-block;
+        width: 24%;
+        /*height:40px;
+        vertical-align: middle;*/
+        //padding: 10px 0;
+        font-size: 16px ;
+        text-align: center;
+        //padding: 5px 0;
+        color: $menu_color ;font-weight: $heavy_font;font-size: 13px;
+        
+    }
+.menu2 > ul > li > a{position: relative;display: inline-block; width:auto ;  color: $menu_color ;font-weight: 600;font-size: 13px;/*line-height: 40px;*/}
     .theBodyDiv{
         
         
