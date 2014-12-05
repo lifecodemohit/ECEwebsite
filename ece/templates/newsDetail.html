@@ -1,6 +1,81 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
+<head>
+    <title>ECE Research Group</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'allNews/css/stylesheet2.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'newsDetail/css/stylesheet2.css' %}">
+
+</head>
+
+<body>
+    <div class="longBar"></div>
+    <div class="container">
+
+        <div class="header">
+            <img src="/static/logo/long_min_iiitd_colors.png" alt="IIITD">
+            <div class="ece_head"><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#" tabindex="1">Home</a>
+                </li><li><a href="#" tabindex="2">Research</a>
+                    <ul>
+                        <li><a href="#"><span>Research  1</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 2</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 3</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 4</span></a>
+                        </li>
+                    </ul>
+                </li><li><a href="#" tabindex="3">Publications</a>
+                </li><li><a href="#" tabindex="4">People</a>
+                    <ul>
+                        <li><a href="#" tabindex="5"><span>Faculty</span></a>
+                        </li>
+                    </ul>
+                </li><li><a href="">About</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="theBody">
+           
+            <div class="infoBlock">
+                
+                <div class="newsHeader">{{news.heading}}</div>
+                <div class="magicLine"></div>
+                <div class="dateLine" >{{news.pub_date}}</div>
+                <!--<img class="newsImage" src="/static/logo/ece_logo.png"/>!-->
+                {% for img in news.news_image_set.all %}
+		    <div class="newsImage" style="padding:5px 10px 0px 10px"><img src="{{ img.img1.url }}" height="250" width="420" ></div>
+		{% endfor %}
+                <div class="newsDetail">{{news.extra_inf}}</div>
+
+            </div>
+
+        </div>
+
+        <div class="footer"></div>
+    </div>
+    <div class="longBar"></div>
+
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script src="/static/allFacPage/js/jQuery.js"></script>
+
+</body>
+
+</html>
+<!--<html lang="en">
 
 <head>
 
@@ -19,3 +94,5 @@
     {% endfor %}
 </body>
 </html>
+
+!-->
