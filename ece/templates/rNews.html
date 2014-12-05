@@ -1,4 +1,88 @@
 {% load static %}
+<html>
+
+<head>
+    <title>ECE Research Group</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'allNews/css/stylesheet2.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'allNews/css/stylesheet2.css' %}">
+
+</head>
+
+<body>
+    <div class="longBar"></div>
+    <div class="container">
+
+        <div class="header">
+            <img src="/static/logo/long_min_iiitd_colors.png" alt="IIITD">
+            <div class="ece_head"><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#" tabindex="1">Home</a>
+                </li><li><a href="#" tabindex="2">Research</a>
+                    <ul>
+                        <li><a href="#"><span>Research  1</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 2</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 3</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 4</span></a>
+                        </li>
+                    </ul>
+                </li><li><a href="#" tabindex="3">Publications</a>
+                </li><li><a href="#" tabindex="4">People</a>
+                    <ul>
+                        <li><a href="#" tabindex="5"><span>Faculty</span></a>
+                        </li>
+                    </ul>
+                </li><li><a href="">About</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="theBody">
+            <div class="upperBlock">
+                <div class="research_group_title">Latest News</div>
+            </div>
+
+            <div class="infoBlock">
+
+                <ul class="newsUL">
+		{% for news in news_list %}
+                <li>
+                    <a href="#"><div class="dateLine" >{{news.pub_date}}</div>{{news.heading}}</a>
+                    <span>{{news.main_text}}</span>
+                    </li>
+		{% endfor %}
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer"></div>
+    </div>
+    <div class="longBar"></div>
+
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script src="/static/allFacPage/js/jQuery.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+<!--{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,4 +111,5 @@
 	    <p>No recent news are available.</p>
 	{% endif %}
 </body>
-</html>
+</html>!-->
+
