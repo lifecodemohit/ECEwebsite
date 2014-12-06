@@ -35,7 +35,7 @@
         <div class="theBody">
             <div class="upperBlock">
 
-                <div class="research_group_title">Lab Title</div>
+                <div class="research_group_title">{{cLab.lab_name}}</div>
                 <div class="menu2">
                     <!-- second menu -->
                     <ul>
@@ -56,12 +56,9 @@
                     <div class="theBodyDiv">
                         <div>Publications</div>
                         <ul class="orderedList">
-                            <li class="pubBox"> A. Majumdar and R. K. Ward, “Exploiting Rank Deficiency for MR Image Reconstruction from Multiple Partial K-Space Scans”, IEEE Canadian Conference on Electrical and Computer Engineering, 2013<a href="" style="color:blue;"> PDF</a></li>
-                            <li class="pubBox"> A. Majumdar and R. K. Ward, “Exploiting Sparsity and Rank-deficiency in Dynamic MRI Reconstruction”, IEEE International Conference on Acoustics, Speech, and Signal Processing, 2013<a href="" style="color:blue;"> PDF</a></li>
-                            <li class="pubBox"> Coffee<a href="" style="color:blue;"> PDF</a></li>
-                            <li class="pubBox"> A. Majumdar and R. K. Ward, “Exploiting Rank Deficiency for MR Image Reconstruction from Multiple Partial K-Space Scans”, IEEE Canadian Conference on Electrical and Computer Engineering, 2013<a href="" style="color:blue;"> PDF</a></li>
-                            <li class="pubBox"> Coffee<a href="" style="color:blue;"> PDF</a></li>
-                            <li class="pubBox"> Coffee<a href="" style="color:blue;"> PDF</a></li>
+			{% for pub in cLabMem.labpublication_set.all %}
+                            <li class="pubBox"> {{pub.lpub_about}} <a href="{{pub.lpub_pdf}}" style="color:blue;"> PDF</a></li>
+			{% endfor %}
                         </ul>
 
                     </div>
