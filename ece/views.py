@@ -7,17 +7,20 @@ from ece.models import *
 def index(request):
 	homepage_slider = homepage.objects.all()
 	latest_news_list = News.objects.all().order_by('-pub_date')[:3]
+	rgroup_list = createGroup.objects.all()
 	latest_events_list = Comingevent.objects.all().order_by('-pub_date')[:3]
 	latest_publication_list = publications.objects.all().order_by('-pubDate')[:3]
-	context={'homepage_slider' : homepage_slider, 'latest_news_list': latest_news_list, 'latest_events_list': latest_events_list, 'latest_publication_list': latest_publication_list}
+	context={'homepage_slider' : homepage_slider, 'rgroup_list' : rgroup_list, 'latest_news_list': latest_news_list, 'latest_events_list': latest_events_list, 'latest_publication_list': latest_publication_list}
 	return render(request, 'index.html', context)
 
 def createGroup_detail(request, title):
 	print title
 	cGroup = get_object_or_404(createGroup, title=title)  
 	publication_list = publications.objects.filter(category=title)
+	pubCode_list = labPubCode.objects.filter(lpub_group=title)
 	faculty_list = facultymem.objects.all()
-	context={'publication_list': publication_list, 'faculty_list': faculty_list, 'cGroup': cGroup }
+	lab_list = lab.objects.all()
+	context={'publication_list': publication_list, 'lab_list': lab_list, 'pubCode_list': pubCode_list, 'faculty_list': faculty_list, 'cGroup': cGroup }
 	return render(request, 'createGroup.html', context)
 
 def rMenu(request):

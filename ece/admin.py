@@ -30,8 +30,13 @@ class courseAdmin(admin.ModelAdmin):
 class faculty_Pubinline(admin.StackedInline):
     model = facultycoursecode
     extra = 0
+
+class facultyLab_Pubinline(admin.StackedInline):
+    model = facultyLabcode
+    extra = 0
+
 class facultyAdmin(admin.ModelAdmin):
-    inlines = [faculty_Pubinline]
+    inlines = [faculty_Pubinline, facultyLab_Pubinline]
 
 class author_Pubinline(admin.StackedInline):
     model = author
@@ -51,8 +56,12 @@ class labPub_Pubinline(admin.StackedInline):
     model = labPublication
     extra = 0
 
+class labPubCode_Pubinline(admin.StackedInline):
+    model = labPubCode
+    extra = 0
+
 class labAdmin(admin.ModelAdmin):
-    inlines = [labPub_Pubinline, labRes_Pubinline, labMem_Pubinline]
+    inlines = [labPub_Pubinline, labRes_Pubinline, labMem_Pubinline, labPubCode_Pubinline]
 
 admin.site.register(homepage)
 admin.site.register(News, NewsAdmin)

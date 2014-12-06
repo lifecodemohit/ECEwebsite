@@ -4,8 +4,6 @@ from django.db import models
 
 class homepage(models.Model):
 	extra_inf = models.CharField(max_length=200000,null=True,blank=True)
-	extra_inf = models.CharField(max_length=200000,null=True,blank=True)
-	extra_inf = models.CharField(max_length=200000,null=True,blank=True)
 	img1=models.ImageField(null=True,upload_to = 'home_folder/')
 	img2=models.ImageField(null=True,upload_to = 'home_folder/')
 	img3=models.ImageField(null=True,upload_to = 'home_folder/')
@@ -15,7 +13,7 @@ class homepage(models.Model):
 
 class createGroup(models.Model):
 	title=models.CharField(max_length=2000)
-	about=models.CharField(max_length=800000)
+	about=models.CharField(max_length=100000)
 	category = models.CharField(max_length=2000,null=True,blank=True)
 	img1=models.ImageField(null=True,upload_to = 'pic_folder/')
 	img2=models.ImageField(null=True,upload_to = 'pic_folder/')
@@ -31,7 +29,7 @@ class createGroup(models.Model):
 #class latestPub(models.Model):
 #	pub_id = models.ForeignKey(createGroup) 
 #	pubHeading=models.CharField(max_length=20000)
-#	pubDetail=models.CharField(max_length=800000)
+#	pubDetail=models.CharField(max_length=100000)
 #	pubDate = models.DateTimeField('date published')
 #	extra_inf = models.CharField(max_length=200000,null=True,blank=True)
 #	extra_inf1 = models.CharField(max_length=200000,null=True,blank=True)
@@ -40,7 +38,7 @@ class News(models.Model):
     heading = models.CharField(max_length=2000)
     category = models.CharField(max_length=2000)
     pub_date = models.DateTimeField('date published')
-    main_text = models.CharField(max_length=80000)
+    main_text = models.CharField(max_length=10000)
     extra_inf = models.CharField(max_length=20000,null=True,blank=True)
     def __unicode__(self):  # Python 3: def __str__(self):
     	return self.heading
@@ -71,19 +69,19 @@ class Comingevent_image(models.Model):
 
 class publications(models.Model):
 	category = models.CharField(max_length=2000)
-	pubHeading=models.CharField(max_length=20000)
-	pubDetail=models.CharField(max_length=20000)
+	pubHeading=models.CharField(max_length=2000)
+	pubDetail=models.CharField(max_length=10000)
 	pubDate = models.DateTimeField('date published')
-	extra_inf = models.CharField(max_length=20000,null=True,blank=True)
-	title = models.CharField(max_length=20000,null=True,blank=True)
-	pubtype = models.CharField(max_length=20000,null=True,blank=True)
-	yearofpub = models.CharField(max_length=20000,null=True,blank=True)
-	journal = models.CharField(max_length=20000,null=True,blank=True)
-	volume = models.CharField(max_length=20000,null=True,blank=True)
-	pagination = models.CharField(max_length=20000,null=True,blank=True)
-	abstract = models.CharField(max_length=20000,null=True,blank=True)
-	url = models.CharField(max_length=20000,null=True,blank=True) 
-	doi = models.CharField(max_length=20000,null=True,blank=True)
+	extra_inf = models.CharField(max_length=2000,null=True,blank=True)
+	title = models.CharField(max_length=2000,null=True,blank=True)
+	pubtype = models.CharField(max_length=2000,null=True,blank=True)
+	yearofpub = models.CharField(max_length=2000,null=True,blank=True)
+	journal = models.CharField(max_length=2000,null=True,blank=True)
+	volume = models.CharField(max_length=2000,null=True,blank=True)
+	pagination = models.CharField(max_length=2000,null=True,blank=True)
+	abstract = models.CharField(max_length=2000,null=True,blank=True)
+	url = models.CharField(max_length=2000,null=True,blank=True) 
+	doi = models.CharField(max_length=2000,null=True,blank=True)
 	def __unicode__(self):  # Python 3: def __str__(self):
 		return self.pubDetail
 
@@ -112,6 +110,14 @@ class facultycoursecode(models.Model):
 	extrainf1 = models.CharField(max_length=2000,null=True,blank=True)
 	def __unicode__(self):  # Python 3: def __str__(self):
 		return self.fcoursecode
+
+class facultyLabcode(models.Model):
+	facultyLab_id = models.ForeignKey(facultymem)
+	fLabcode = models.CharField(max_length=200,null=True,blank=True) 
+	extrainf = models.CharField(max_length=2000,null=True,blank=True)
+	extrainf1 = models.CharField(max_length=2000,null=True,blank=True)
+	def __unicode__(self):  # Python 3: def __str__(self):
+		return self.fLabcode
 
 class courses(models.Model):
 	img = models.ImageField(null=True,upload_to = 'course_folder/')
@@ -146,6 +152,7 @@ class lab(models.Model):
 class labMember(models.Model):
 	lmem_id =  models.ForeignKey(lab)
 	lmem_name = models.CharField(max_length=200)
+	#limgmem=models.ImageField(null=True,upload_to = 'mem_folder/')
 	lmem_email = models.CharField(max_length=200)
 	lmem_link = models.CharField(max_length=200)
 	lmem_about = models.CharField(max_length=5000)
@@ -168,3 +175,7 @@ class labResearch(models.Model):
 	lresearch_extra = models.CharField(max_length=2000)
 	lresearch_extra1 = models.CharField(max_length=2000)
 
+class labPubCode(models.Model):
+	lpubCode_ide = models.ForeignKey(lab)
+	lpub_group = models.CharField(max_length=200)
+	lextra_inf = models.CharField(max_length=200)

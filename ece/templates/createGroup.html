@@ -24,7 +24,7 @@
                         {% if publication_list %}
                          <ul>
                             {% for pub in publication_list %}
-                            <li><ul><li class="research_box_title"><a href = "/publication/{{ pub.pubDetail }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf}}</li></ul></li>
+                            <li><ul><li class="research_box_title"><a href = "{{ pub.title }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf}}</li></ul></li>
                             {% endfor %}
                         </ul>
                         {% else %}
@@ -37,16 +37,21 @@
                             {% ifequal cGroup.title facu.fcoursecode %}
                               <!--<li><div>{{facu.fcoursecode}}</div></li>!-->
                               <li><ul><li class="people_left"><a href = "/faculty/{{ faculty.facultycode }}">{{faculty.name}}</a></li><li class = "people_right">{{facu.extrainf}}</li>
+				  
                                   <li class="labsListeItem">
-                                   <a href="#">Lab 1</a>
-                                      <a href="#">Lab  OMFG SBDSGDSHDG kbacnd asdfhakj dsbfsd ds,mnfdn ,mdsnf d</a>
-                                      <a href="#">Lab 1</a>
-                                      <a href="#">Lab 1</a>
-                                      <a href="#">Lab 1</a>
-                                      <a href="#">Lab 1</a>
-                                      <a href="#">Lab 1</a>
+					{% for facLab in faculty.facultylabcode_set.all %}
+						{% for lab in lab_list %}
+							{% ifequal lab.lab_code facLab.fLabcode %}                           
+					 			<a href="/lab/{{facLab.fLabcode}}">{{lab.lab_name}}</a>
+							{% endifequal %}
+						{%endfor%}
+						
+					{% endfor %}
+					<p style="margin-top:-20px"></p>
                                   </li>
+				
                                   </ul></li>
+				
                             {% endifequal %}
                         </ul>
                         {% endfor %}

@@ -59,11 +59,11 @@
                         {% else %}
                         <p></p>
                         {% endif %}
-                        </div></li><!-- --><li class = "box3" ><div style="padding-top:5px;padding-bottom:5px;"><a href="/research/publication">Latest Publications</a></div><div class = "awardBoxText">
+                        </div></li><!-- --><li class = "box3" ><div style="padding-top:5px;padding-bottom:5px;"><a href="/">Latest Publications</a></div><div class = "awardBoxText">
                         {% if latest_publication_list %}
                         <ul>
                             {% for pub in latest_publication_list %}
-                            <li><ul><div class="dateLine">{{ pub.pubDate }}</div><li class="research_box_title"><a href = "publication/{{ pub.pubDetail }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf }}</li></ul></li>
+                            <li><ul><div class="dateLine">{{ pub.pubDate }}</div><li class="research_box_title"><a href = "{{ pub.title }}">{{ pub.pubHeading }}</a></li><li class = "research_box_liner">{{ pub.extra_inf }}</li></ul></li>
                             {% endfor %}
                         </ul>
                         {% else %}
@@ -77,30 +77,15 @@
                          <object class="video" data="http://www.youtube.com/embed/4mLR7bLfB_4"
    width="560" height="200"></object>
                         <div class="rgSummaryBox">
-                                <div>
+                                {% for res in rgroup_list %}
+				<div style="margin-bottom:10px">
                                     <ul>
-                                        <li><a href="#">Research Group 1</a></li>
-                                        <li> Hi there, I am research group 1. IM here to live long enough. Even more than dinasours have lived</li>
+                                        <li><a href="research/{{res.title}}">{{res.category}}</a></li>
+                                        <li> {{res.extra_inf}}</li>
                                     </ul>
                                 </div>
-                                <div>
-                                    <ul>
-                                        <li><a href="#">Research Group 2</a></li>
-                                        <li>  Hi there, I am research group 1. Im here to live long enough. Even more than dinasours have lived. But for a testin I will am an extra line here.But for a testin I will am an extra line here.</li>
-                                    </ul>
-                                </div>
-                                 <div>
-                                    <ul>
-                                        <li><a href="#">Research Group 3</a></li>
-                                        <li> Hi there, I am research group 1. IM here to live long enough. Even more than dinasours have lived</li>
-                                    </ul>
-                                </div>
-                                 <div>
-                                    <ul>
-                                        <li><a href="#">Research Group 4</a></li>
-                                        <li> Hi there, I am research group 1. IM here to live long enough. Even more than dinasours have lived</li>
-                                    </ul>
-                                </div>
+				
+				{% endfor %}
                         </div>
                     </div>
             </div>
