@@ -13,16 +13,6 @@ $blue_header_font_weight : 500;
      -moz-box-shadow: $a $b $c $d $color;
       -ms-box-shadow: $a $b $c $d $color;
 }
-@mixin dbs($a:0,$b:0,$c:0,$color:#000){ //drop box shadow
-   
-    
-    filter: drop-shadow($a $b $c $color);
-    -webkit-filter: drop-shadow($a $b $c $color);
-    -moz-filter: drop-shadow($a $b $c $color);
-    -ms-filter: drop-shadow($a $b $c $color);
-
-}
-
 @mixin bsn()//box-shadow-none
 {
      box-shadow: none;
@@ -232,51 +222,32 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
         float:left;
 
     }
-.newsHeader{
-    font-size: 20px;
-    color: $color_d;
-    
-    margin-top: 20px;
-    margin-bottom: 5px;        
-    margin-left:15px;
-    
-    display: block;
+ .newsUL{
     width: 100%;
+     margin:0 auto;
+     height: auto;
+     font-size: 15px;
+ }
+.newsUL > li{
     height: auto;
+    width:96%;
+    margin: 20px auto;
+}
+.newsUL > li > a{
+    margin-top: 10px;
+    display: block;
+    color: $color_d;
 }
 
-.magicLine{
-
-    height: 1px;
-    overflow: hidden;
-    background-color: #ddd;
-    width: 85%;
-    margin-left: 15px;
-    margin-top:5px;
-}
+.newsUL > li > a:hover{text-decoration:underline;}
 .dateLine{
     text-decoration: none !important;
     letter-spacing: 1px;
     margin-top: 10px;
-    margin-left: 15px;
-    font-size: 12px;
+    font-size: 9px;
     color: #666;
 }
-.newsImage{
-    width: 40%;
-    margin-left: 10px;
-    display: inline-block;
-    @include dbs(0px,0px,2px,#000);
-}
-.newsDetail{
-    width: 96%;
-    display: block;
-    padding: 4px;
-    
-    margin: 0 auto;
-    margin-top: 23px;
-    font-size: smaller;
-}
+.newsUL > li > span{font-size: 13px; display: block;}
 .footer{
     margin-top:10px;
     display: block;
@@ -284,9 +255,7 @@ a {text-decoration: none; color: inherit; font-weight: inherit; font-family: inh
     height: $height_header;
     background-color: $color_d;
 }
-.longBar{
-    min-width: 960px;
-    width: 100%;
+.longBar{width: 1400px;
     height:25px;
 }
 .longBar:first-of-type{
