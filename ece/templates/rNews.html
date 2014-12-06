@@ -57,7 +57,8 @@
                 <ul class="newsUL">
 		{% for news in news_list %}
                 <li>
-                    <a href="#"><div class="dateLine" >{{news.pub_date}}</div>{{news.heading}}</a>
+		    <div class="dateLine" >{{news.pub_date}}</div>
+                    <a href="{{ news.id }}" style="margin-top:-1px">{{news.heading}}</a>
                     <span>{{news.main_text}}</span>
                     </li>
 		{% endfor %}

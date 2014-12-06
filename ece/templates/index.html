@@ -39,7 +39,7 @@
                 </div>
                    
                 <div class = "infoBlock" >
-                    <ul class = "listLevel1"><li class = "box1"><div style="padding-top:5px;padding-bottom:5px;"><a href = "#">Latest News</a></div><div class = "resBoxText"> <!--hash replaced by this.(researches.html)-->
+                    <ul class = "listLevel1"><li class = "box1"><div style="padding-top:5px;padding-bottom:5px;"><a href = "/research/news">Latest News</a></div><div class = "resBoxText"> <!--hash replaced by this.(researches.html)-->
                         {% if latest_news_list %}
                         <ul>
                             {% for news in latest_news_list %}
@@ -49,7 +49,7 @@
                         {% else %}
                         <p></p>
                         {% endif %}
-                        </div></li><!-- --><li class = "box2"><div style="padding-top:5px;padding-bottom:5px;"><a href="#">Upcoming Events</a></div><div class = "pubBoxText">
+                        </div></li><!-- --><li class = "box2"><div style="padding-top:5px;padding-bottom:5px;"><a href="/research/events">Upcoming Events</a></div><div class = "pubBoxText">
                         {% if latest_events_list %}
                         <ul>
                             {% for event in latest_events_list %}
@@ -59,7 +59,7 @@
                         {% else %}
                         <p></p>
                         {% endif %}
-                        </div></li><!-- --><li class = "box3" ><div style="padding-top:5px;padding-bottom:5px;"><a href="#">Latest Publications</a></div><div class = "awardBoxText">
+                        </div></li><!-- --><li class = "box3" ><div style="padding-top:5px;padding-bottom:5px;"><a href="/research/publication">Latest Publications</a></div><div class = "awardBoxText">
                         {% if latest_publication_list %}
                         <ul>
                             {% for pub in latest_publication_list %}

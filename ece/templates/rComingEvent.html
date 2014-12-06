@@ -57,7 +57,8 @@
                 <ul class="newsUL">
 		{% for event in comingevent_list %}
                 <li>
-                    <a href="{{ event.id }}"><div class="dateLine" >{{ event.pub_date }}</div>{{ event.heading }}</a>
+		    <div class="dateLine" >{{ event.pub_date }}</div>
+                    <a href="{{ event.id }}" style="margin-top:-1px">{{ event.heading }}</a>
                     <span>{{ event.main_text }}</span>
                     </li>
 		{% endfor %}
