@@ -55,6 +55,10 @@ class Comingevent(models.Model):
     category = models.CharField(max_length=2000)
     pub_date = models.DateTimeField('date published')
     main_text = models.CharField(max_length=20000)
+    #when = models.CharField(max_length=2000)
+    #where = models.CharField(max_length=2000)
+    #link = models.CharField(max_length=2000)
+    #link_text = models.CharField(max_length=2000)
     extra_inf = models.CharField(max_length=20000,null=True,blank=True)
     def __unicode__(self):  # Python 3: def __str__(self):
     	return self.heading

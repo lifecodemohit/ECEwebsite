@@ -1,4 +1,88 @@
 {% load static %}
+<html>
+
+<head>
+    <title>ECE Research Group</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'allNews/css/stylesheet2.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'eventDetail/css/stylesheet2.css' %}">
+
+</head>
+
+<body>
+    <div class="longBar"></div>
+    <div class="container">
+
+        <div class="header">
+            <img src = "/static/logo/long_min_iiitd_colors.png" alt="IIITD">
+            <div class="ece_head"><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#" tabindex="1">Home</a>
+                </li><li><a href="#" tabindex="2">Research</a>
+                    <ul>
+                        <li><a href="#"><span>Research  1</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 2</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 3</span></a>
+                        </li>
+                        <br>
+                        <li><a href="#"><span>Research Group 4</span></a>
+                        </li>
+                    </ul>
+                </li><li><a href="#" tabindex="3">Publications</a>
+                </li><li><a href="#" tabindex="4">People</a>
+                    <ul>
+                        <li><a href="#" tabindex="5"><span>Faculty</span></a>
+                        </li>
+                    </ul>
+                </li><li><a href="">About</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="theBody">
+           
+            <div class="infoBlock">
+                
+                <div class="newsHeader">Inauguration of Cybersecurity Education & Research Centre</div>
+                <div class="magicLine"></div>
+                <div class = "when_where_why">
+                    <div>{{comingevent.heading}}</div>
+                <div><span class="ws">When :</span> <span class="wsInfo">{{comingevent.when}}</span></div>
+                    <div><span class="ws">Where :</span> <span class="wsInfo">{{comingevent.where}}</span></div>
+                    <div><span class="ws">Link :</span> <a class="wsInfo" href="{{comingevent.link}}">{{comingevent.link_text}}</a></div>
+                    
+                    
+                </div>
+		{% for img in comingevent.comingevent_image_set.all %}
+	        	<img class="newsImage" src="{{ img.img1.url }}" height="270" width="270" >
+	        {% endfor %}
+                
+                <div class="newsDetail">{{comingevent.main_text}}</div>
+
+            </div>
+
+        </div>
+
+        <div class="footer"></div>
+    </div>
+    <div class="longBar"></div>
+
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script src="/static/allFacPage/js/jQuery.js"></script>
+
+</body>
+
+</html>
+<!--{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,4 +102,4 @@
     <a><img src="{{ img.img1.url }}" height="420" width="420" ></a>
     {% endfor %}
 </body>
-</html>
+</html>!-->
