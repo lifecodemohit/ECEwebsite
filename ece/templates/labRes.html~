@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'lab/css/stylesheet_research.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'lab/css/slider_stylesheet.css' %}">
+
+    <title>ECE Research Group Website</title>
+</head>
+
+<body>
+<!--
+    <h1>Hello World.....</h1>
+    <h1>{{cLab.lab_name}}</h1>
+    <h3>{{cLab.lab_about}}</h3>!-->
+    <div class="longBar"></div>
+    <div class="container">
+
+        <div class="header">
+            <div class="research_group_title">{{cLab.lab_name}}</div>
+            <div class="ece_head"><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span>
+            </div>
+        </div>
+
+        <div class="theBody">
+            <div class="upperBlock">
+
+            <div class="menu2"> <!-- second menu -->
+         <ul>
+    <li><a href="./index.html">About</a>
+    </li>
+    <li><a href="./lab_members.html">Members</a>
+    </li>
+    <li><a href="./lab_research_page.html">Research</a>
+    </li>
+    <li><a href="./lab_pub.html">Publications</a>
+    </li>
+
+
+</ul>
+                    </ul>
+                </div>
+                <div class="infoBlock">
+
+                    <div class="theBodyDiv">
+                        <div>Research Areas</div>
+                        {% for res in cLabMem.labresearch_set.all %}
+                        <div class="research_head">{{res.lresearch_title}}
+                        </div>
+                         <div class="research_dropdown">{{res.lresearch_maintext}}</div>
+                        {% endfor %}
+                    </div>    
+            </div>
+
+            <div class="footer"></div>
+        </div>
+    </div>
+    <div class="longBar"></div>
+
+
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script src="/static/lab/js/jQuery.js"></script>
+    <script src="/static/lab/js/myJs.js"></script>
+    <script src="/static/lab/js/responsiveslides.min.js"></script>
+
+</body>
+</html>

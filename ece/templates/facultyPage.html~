@@ -8,9 +8,9 @@
         <link rel="stylesheet" type="text/css" href="{% static 'faculty/css/stylesheet2.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'faculty/css/slider_stylesheet.css' %}">
     </head>
-    <body style="overflow-x:hidden;">
+    <body>
         <div class = "longBar"></div>
-        <div class = "container" style="box-shadow: 0px 1px 5px 0px #666666;">
+        <div class = "container">
             
             <div class = "header"><img src = "/static/logo/long_min_iiitd_colors.png" alt="IIITD"><div class="ece_head" ><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span></div>
             </div>
@@ -28,32 +28,31 @@
                 <div class="research_group_title"></div></div>
                 <div class="right_column">
                     <div class="contact">
-                        <img src="{{ cFaculty.img.url }}" style="padding:5px;width:305px">
-                        <div style="font-weight:800">Contact</div>
-                        <div class="contactContent" style="margin-top:-10px">
+                        <img src="{{ cFaculty.img.url }}">
+                        <div>Contact</div>
+                        <div class="contactContent">
                             {% autoescape off %}{{cFaculty.extrainf}}{% endautoescape %}
                             </div>
                         
                     </div>
-                    <!--<object class="video" data="http://www.youtube.com/embed/4mLR7bLfB_4"
+                    <object class="video" data="http://www.youtube.com/embed/4mLR7bLfB_4"
    width="560" height="200"></object>
-   !-->
                     </div>    
                     
                 <div class = "infoBlock">
-                    <ul class = "listLevel1"><!-- --><li class = "box1"><div class = "facultyNameBox"><div class="position" style="font-weight:600">{{cFaculty.extrainf1}}</div><div class = "facultyName" style="font-weight:800">{{cFaculty.name}}</div></div><div class = "aboutThisFaculty">
+                    <ul class = "listLevel1"><!-- --><li class = "box1"><div class = "facultyNameBox"><div class="position">{{cFaculty.extrainf1}}</div><div class = "facultyName">{{cFaculty.name}}</div></div><div class = "aboutThisFaculty">
                         {% autoescape off %}{{cFaculty.about}}{% endautoescape %}
-                        </div></li><!-- --><li class = "box1"><div style="font-weight:800">Latest Publications</div><div class = "thisPublications">
+                        </div></li><!-- --><li class = "box1"><div>Latest Publications</div><div class = "thisPublications">
                             {% for pub in publication_list %}
                             {% for pubu in pub.author_set.all %}
                             <ul>
                                 {% ifequal cFaculty.facultycode pubu.authorcode %}
-                                  <li><ul><li class="research_box_title"><a href = "{{ pub.title }}">{{pub.pubHeading}}</a></li><li class = "research_box_liner">{{pub.extra_inf}}</li></ul></li>
+                                  <li><ul><li class="research_box_title"><a href = "/publication/{{ pub.pubDetail }}">{{pub.pubHeading}}</a></li><li class = "research_box_liner">{{pub.extra_inf}}</li></ul></li>
                                 {% endifequal %}
                             </ul>
                             {% endfor %}
                             {% endfor %}
-                        </div></li><!-- --><li class = "box2"><div style="font-weight:800">Research Groups</div><div> <!--hash replaced by this.(researches.html)-->
+                        </div></li><!-- --><li class = "box2"><div>Courses</div><div> <!--hash replaced by this.(researches.html)-->
                         {% for fac in cFaculty.facultycoursecode_set.all %}    
             
                         {% for res in rgroup_list %}
@@ -78,9 +77,9 @@
                     
             </div>
             
-           <div class = "footer" style="height:40px"></div>
+            <div class = "footer"></div>
             </div>
-        <div class = "longBar" style="height:27px;font-size:13px;color:#585858;font-weight:550"> <p style="margin-left:480px;padding-top:5px;">Designed and maintained by : <a href="">Atul Jain</a> and <a href="">Mohit Wadhwa</a></p></div>
+        <div class = "longBar"></div>
 
         
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
