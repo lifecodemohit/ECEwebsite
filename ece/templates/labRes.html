@@ -22,7 +22,7 @@
     <div class="container">
 
         <div class="header">
-            <div class="research_group_title">{{cLab.lab_name}}</div>
+            <div class="research_group_title" style="margin-top:20px;font-weight:800">{% autoescape off %}{{cLab.lab_name}}{% endautoescape %}</div>
             <div class="ece_head"><span>Electronics</span><span> and</span><span> Communication </span><span>Engineering</span><span> Department</span>
             </div>
         </div>
@@ -53,15 +53,16 @@
                         {% for res in cLabMem.labresearch_set.all %}
                         <div class="research_head">{{res.lresearch_title}}
                         </div>
-                         <div class="research_dropdown">{{res.lresearch_maintext}}</div>
+                         <div class="research_dropdown">{% autoescape off %}{{res.lresearch_maintext}}{% endautoescape %}</div>
                         {% endfor %}
                     </div>    
             </div>
 
-            <div class="footer"></div>
+            <div class = "footer" style="height:40px;margin-top:5px"></div>
         </div>
     </div>
-    <div class="longBar"></div>
+    </div>
+   <div class = "longBar" style="height:27px;font-size:13px;color:#585858;font-weight:550"> <p style="margin-left:480px;padding-top:5px;">Designed and maintained by : <a href="">Atul Jain</a> and <a href="">Mohit Wadhwa</a></p></div>
 
 
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->

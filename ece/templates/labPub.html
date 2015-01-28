@@ -14,17 +14,10 @@
 
     <title>ECE Research Group Website</title>
 </head>
-<body>
-<!-- <h1>Hello World.....</h1>
-    <h1>{{cLabMem.lab_name}}</h1>
-    <h3>{{cLabMem.lab_code}}</h3>
-    {% for pub in cLabMem.labmember_set.all %}
-        <h2>{{pub.lpub_year}}</h2>
-        <h3>{{pub.lpub_about}}</h3>
-        <a href="http://www.google.com">abcd</a>
-    {% endfor %} !-->
-    <div class="longBar"></div>
-    <div class="container">
+<body style="overflow-x:hidden;">
+        <div class = "longBar"></div>
+        <div class = "container" style="box-shadow: 0px 1px 5px 0px #666666;">
+
 
         <div class="header">
 
@@ -35,7 +28,7 @@
         <div class="theBody">
             <div class="upperBlock">
 
-                <div class="research_group_title">{{cLab.lab_name}}</div>
+                <div class="research_group_title" style="margin-top:20px;font-weight:800">{% autoescape off %}{{cLab.lab_name}}{% endautoescape %}</div>
                 <div class="menu2">
                     <!-- second menu -->
                     <ul>
@@ -57,7 +50,7 @@
                         <div>Publications</div>
                         <ul class="orderedList">
 			{% for pub in cLabMem.labpublication_set.all %}
-                            <li class="pubBox"> {{pub.lpub_about}} <a href="{{pub.lpub_pdf}}" style="color:blue;"> PDF</a></li>
+                            <li class="pubBox"> {% autoescape off %}{{pub.lpub_about}}{% endautoescape %} <a href="{{pub.lpub_pdf}}" style="color:blue;"> PDF</a></li>
 			{% endfor %}
                         </ul>
 
@@ -66,10 +59,11 @@
 
             </div>
 
-            <div class="footer"></div>
-        </div>
-    </div>
-    <div class="longBar"></div>
+            <div class = "footer" style="height:40px;margin-top:1px"></div>
+            </div>
+            </div>
+         <div class = "longBar" style="height:27px;font-size:13px;color:#585858;font-weight:550"> <p style="margin-left:480px;padding-top:5px;">Designed and maintained by : <a href="">Atul Jain</a> and <a href="">Mohit Wadhwa</a></p></div>
+
 
 
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->

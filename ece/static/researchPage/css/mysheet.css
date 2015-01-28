@@ -69,9 +69,11 @@ a {
   background-color: white;
   border-bottom: 2px solid #3FADA8; }
 
+/* line 120, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .menu > ul {
   cursor: context-menu; }
 
+/* line 126, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .menu > ul > li {
   padding: 5px 0;
   margin: 1px 0px;
@@ -85,6 +87,7 @@ a {
   font-weight: 600;
   font-size: 13px; }
 
+/* line 143, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .menu > ul > li > a {
   position: relative;
   display: block;
@@ -94,13 +97,15 @@ a {
   font-size: 13px;
   /*line-height: 40px;*/ }
 
+/* line 145, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .menu > ul > li:nth-child(n+1) {
   color: white;
   margin-bottom: 0; }
 
 /*DROP DOWN */
+/* line 152, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .menu > ul > li > ul {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: black;
   display: none;
   position: absolute;
   margin-top: 5px;
@@ -109,11 +114,13 @@ a {
   border-bottom: 1px solid #3FADA8;
   border-left: 1px solid #3FADA8;
   border-right: 1px solid #3FADA8; }
+  /* line 165, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
   .menu > ul > li > ul li {
     margin: 5px 10px;
     width: 180px;
     box-shadow: none;
     text-align: center; }
+    /* line 171, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
     .menu > ul > li > ul li a {
       font-size: 12px;
       font-weight: 800;
@@ -122,12 +129,25 @@ a {
       white-space: nowrap;
       /*removed the overlapping of group names*/ }
 
+/* line 185, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .menu > ul > li:hover > ul {
   display: block; }
 
+/* line 187, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
 .menu > ul li:hover > a {
   color: #3FADA8; }
 
+/* line 188, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
+.menu > ul > li:nth-of-type(4) > a {
+  color: #3FADA8; }
+
+/* line 189, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
+.menu > ul > li:focus > ul {
+  display: block; }
+
+/* line 191, /home/atul/Documents/web/ece/gitRepo/ece/static/allFacPage/css/stylesheet2.scss */
+.menu > ul li:focus > a {
+  color: #3FADA8; }
 .theBody {
   cursor: context-menu;
   width: 100%;
